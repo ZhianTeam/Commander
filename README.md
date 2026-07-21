@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="oidle/apk/res/mipmap-hdpi-v4/i.png" width="96" height="96" alt="Commander Icon" style="border-radius: 24%; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
+  <img src="/oldie/icon.png" width="96" height="96" alt="Commander Icon" style="border-radius: 24%; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"/>
 </p>
 
 <h1 align="center">Commander</h1>
