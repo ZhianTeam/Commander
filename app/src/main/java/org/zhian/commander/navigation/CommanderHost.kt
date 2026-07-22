@@ -26,9 +26,9 @@ import java.util.Locale
 import kotlin.math.roundToInt
 
 private object CommanderRouting {
-  const val Splash = "splash"
-  const val Terminal = "terminal",
-  const val Settings = "settings"
+    const val Splash = "splash"
+    const val Terminal = "terminal"
+    const val Settings = "settings"
 }
 
 const val NiriCloseDurationMillis: Int = 250
@@ -58,13 +58,13 @@ private object TerminalGlobalMotionSpec {
 
 private fun AnimatedContentTransitionScope<NavBackStackEntry>.openEnter(): EnterTransition {
     return slideInHorizontally(
-        animationSpec = tween(durationMillis = 450, easing = SetupWizardMotionSpec.FastOutExtraSlowIn),
+        animationSpec = tween(durationMillis = 450, easing = TerminalGlobalMotionSpec.FastOutExtraSlowIn),
         initialOffsetX = { fullWidth -> (fullWidth * 0.10f).roundToInt() },
     ) + fadeIn(
         animationSpec = tween(
             durationMillis = 83,
             delayMillis = 50,
-            easing = SetupWizardMotionSpec.LinearAlpha,
+            easing = TerminalGlobalMotionSpec.LinearAlpha,
         ),
         initialAlpha = 0f,
     )
@@ -72,27 +72,27 @@ private fun AnimatedContentTransitionScope<NavBackStackEntry>.openEnter(): Enter
 
 private fun AnimatedContentTransitionScope<NavBackStackEntry>.openExit(): ExitTransition {
     return slideOutHorizontally(
-        animationSpec = tween(durationMillis = 450, easing = SetupWizardMotionSpec.FastOutSlowIn),
+        animationSpec = tween(durationMillis = 450, easing = TerminalGlobalMotionSpec.FastOutSlowIn),
         targetOffsetX = { fullWidth -> -(fullWidth * 0.05f).roundToInt() },
     )
 }
 
 private fun AnimatedContentTransitionScope<NavBackStackEntry>.closeEnter(): EnterTransition {
     return slideInHorizontally(
-        animationSpec = tween(durationMillis = 450, easing = SetupWizardMotionSpec.FastOutExtraSlowIn),
+        animationSpec = tween(durationMillis = 450, easing = TerminalGlobalMotionSpec.FastOutExtraSlowIn),
         initialOffsetX = { fullWidth -> -(fullWidth * 0.10f).roundToInt() },
     )
 }
 
 private fun AnimatedContentTransitionScope<NavBackStackEntry>.closeExit(): ExitTransition {
     return slideOutHorizontally(
-        animationSpec = tween(durationMillis = 450, easing = SetupWizardMotionSpec.FastOutExtraSlowIn),
+        animationSpec = tween(durationMillis = 450, easing = TerminalGlobalMotionSpec.FastOutExtraSlowIn),
         targetOffsetX = { fullWidth -> (fullWidth * 0.10f).roundToInt() },
     ) + fadeOut(
         animationSpec = tween(
             durationMillis = 83,
             delayMillis = 35,
-            easing = SetupWizardMotionSpec.LinearAlpha,
+            easing = TerminalGlobalMotionSpec.LinearAlpha,
         ),
         targetAlpha = 0f,
     )
@@ -104,7 +104,6 @@ fun CommanderHost(
     onLocaleSelected: (Locale) -> Unit,
     isDarkTheme: Boolean,
     onDarkThemeChange: (Boolean) -> Unit,
-    onSetupFinished: () -> Unit,
     modifier: Modifier = Modifier,
 ) {
     val navController = rememberNavController()
@@ -120,14 +119,51 @@ fun CommanderHost(
     ) {
         composable(route = CommanderRouting.Splash) {
             SplashScreen(
+                onNavigateToTerminal = {
+                    navController.navigate(CommanderRouting.Terminal) {
+                        popUpTo(CommanderRouting.Splash) { inclusive = true }
+                    }
+                }
             )
         }
         composable(route = CommanderRouting.Terminal) {
             TerminalScreen(
+                onNavigateToSettings = {
+                    navController.navigate(CommanderRouting.Settings)
+                }
             )
         }
-        composable(route = CommanderRouting.Settings) {
+        composable(
+            route = CommanderRouting.Settings,
+            enterTransition = {
+                slideInHorizontally(
+                    animationSpec = tween(durationMillis = 450, easing = TerminalGlobalMotionSpec.FastOutExtraSlowIn),
+                    initialOffsetX = { it }
+                ) + fadeIn(animationSpec = tween(durationMillis = 450))
+            },
+            exitTransition = {
+                slideOutHorizontally(
+                    animationSpec = tween(durationMillis = 450, easing = TerminalGlobalMotionSpec.FastOutExtraSlowIn),
+                    targetOffsetX = { it }
+                ) + fadeOut(animationSpec = tween(durationMillis = 450))
+            },
+            popEnterTransition = {
+                slideInHorizontally(
+                    animationSpec = tween(durationMillis = 450, easing = TerminalGlobalMotionSpec.FastOutExtraSlowIn),
+                    initialOffsetX = { -it }
+                ) + fadeIn(animationSpec = tween(durationMillis = 450))
+            },
+            popExitTransition = {
+                slideOutHorizontally(
+                    animationSpec = tween(durationMillis = 450, easing = TerminalGlobalMotionSpec.FastOutExtraSlowIn),
+                    targetOffsetX = { it }
+                ) + fadeOut(animationSpec = tween(durationMillis = 450))
+            }
+        ) {
             SettingsScreen(
+                onNavigateBack = {
+                    navController.popBackStack()
+                }
             )
         }
     }

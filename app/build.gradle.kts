@@ -2,7 +2,6 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
 }
 
@@ -41,7 +40,6 @@ android {
         compose = true
     }
 
-
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
@@ -56,25 +54,27 @@ kotlin {
 }
 
 dependencies {
-    // 声明并初始化 BOM 变量
-    val composeBom = platform("androidx.compose:compose-bom:2026.07.00")
+    // Compose BOM - Latest version from July 2026
+    val composeBom = platform("androidx.compose:compose-bom:2026.06.01")
     implementation(composeBom)
     androidTestImplementation(composeBom)
 
-    // Material 3 Expressive
+    // Material 3 with Expressive support (included in main artifact from 1.3.0+)
     implementation("androidx.compose.material3:material3")
-    implementation("androidx.compose.material3:material3-expressive")
 
     // Core Compose dependencies
     implementation("androidx.compose.ui:ui")
     implementation("androidx.compose.ui:ui-graphics")
     implementation("androidx.compose.ui:ui-tooling-preview")
-    implementation("androidx.activity:activity-compose:1.10.0")
+    implementation("androidx.activity:activity-compose")
 
-    // Core Android & Lifecycle
-    implementation("androidx.core:core-ktx:1.20.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.12.0")
-    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.12.0")
+    // Navigation Compose - Latest stable
+    implementation("androidx.navigation:navigation-compose:2.9.8")
+
+    // Core Android & Lifecycle - Latest stable versions
+    implementation("androidx.core:core-ktx:1.19.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.9.3")
+    implementation("androidx.lifecycle:lifecycle-runtime-compose:2.9.3")
 
     // Icons
     implementation("androidx.compose.material:material-icons-extended")

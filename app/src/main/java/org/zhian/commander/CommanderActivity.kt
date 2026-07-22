@@ -50,7 +50,8 @@ class CommanderActivity : ComponentActivity() {
                             isDarkTheme = isDark,
                             onDarkThemeChange = { wantDark ->
                                 themeMode = if (wantDark) ThemeMode.Dark else ThemeMode.Light
-                            }
+                            },
+                            modifier = Modifier.fillMaxSize()
                         )
                     }
                 }

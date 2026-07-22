@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Commander" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Theme.Commander.Splash" parent="Theme.Commander">
+        <item name="android:windowBackground">@android:color/system_neutral1_900</item>
+    </style>
+</resources>
