@@ -30,5 +30,6 @@ captures/
 *.hprof
 
 # No more iApp again
+/oldie
 *.iapp
 *.iyu
