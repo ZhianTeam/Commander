@@ -1,0 +1,42 @@
+{
+  "issues": [
+    "Node[0] 'file:app/build.gradle.kts' missing type",
+    "Node[0] 'file:app/build.gradle.kts' missing name",
+    "Node[1] 'file:app/src/main/java/org/zhian/commander/CommanderActivity.kt' missing type",
+    "Node[1] 'file:app/src/main/java/org/zhian/commander/CommanderActivity.kt' missing name",
+    "Node[2] 'file:app/src/main/java/org/zhian/commander/CommanderApplication.kt' missing type",
+    "Node[2] 'file:app/src/main/java/org/zhian/commander/CommanderApplication.kt' missing name",
+    "Node[3] 'file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt' missing type",
+    "Node[3] 'file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt' missing name",
+    "Node[4] 'file:app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt' missing type",
+    "Node[4] 'file:app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt' missing name",
+    "Node[5] 'file:app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt' missing type",
+    "Node[5] 'file:app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt' missing name",
+    "Node[6] 'file:app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt' missing type",
+    "Node[6] 'file:app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt' missing name",
+    "Node[7] 'file:app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt' missing type",
+    "Node[7] 'file:app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt' missing name",
+    "Node[8] 'file:app/src/main/java/org/zhian/commander/ui/theme/Theme.kt' missing type",
+    "Node[8] 'file:app/src/main/java/org/zhian/commander/ui/theme/Theme.kt' missing name",
+    "Node[9] 'file:build.gradle.kts' missing type",
+    "Node[9] 'file:build.gradle.kts' missing name",
+    "Node[10] 'file:settings.gradle.kts' missing type",
+    "Node[10] 'file:settings.gradle.kts' missing name"
+  ],
+  "warnings": [
+    "Node 'file:app/src/main/java/org/zhian/commander/CommanderApplication.kt' has no edges (orphan)",
+    "Node 'file:build.gradle.kts' has no edges (orphan)"
+  ],
+  "stats": {
+    "totalNodes": 11,
+    "totalEdges": 10,
+    "totalLayers": 0,
+    "tourSteps": 0,
+    "nodeTypes": {
+      "undefined": 11
+    },
+    "edgeTypes": {
+      "undefined": 10
+    }
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "nodes": [
+    {
+      "id": "file:app/build.gradle.kts",
+      "label": "app/build.gradle.kts",
+      "tags": [
+        "构建配置",
+        "Gradle",
+        "Android",
+        "依赖管理"
+      ],
+      "summary": "Android 应用模块的 Gradle 构建配置文件，定义了编译选项、依赖项和构建类型。",
+      "description": "该文件配置了 Commander Android 应用的构建参数，包括编译 SDK 版本（37）、最低 SDK 版本（28）、Kotlin JVM 目标（21）、Jetpack Compose 依赖（Material 3、Navigation Compose 2.9.8）以及核心 Android 库。启用了 Compose 功能并配置了资源打包规则。",
+      "tier": "infra",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+      "label": "CommanderActivity.kt",
+      "tags": [
+        "Activity",
+        "UI入口",
+        "Compose",
+        "主题管理",
+        "本地化"
+      ],
+      "summary": "应用的主 Activity，设置 edge-to-edge 显示、主题和本地化环境。",
+      "description": "CommanderActivity 是应用的入口点，继承自 ComponentActivity。它配置了透明的系统栏样式，管理应用主题模式（明暗/跟随系统），提供本地化字符串（通过 CompositionLocalProvider），并托管 CommanderHost 导航容器。使用 mutableStateOf 管理 locale 和主题状态。",
+      "tier": "ui",
+      "exports": [
+        "CommanderActivity"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/CommanderApplication.kt",
+      "label": "CommanderApplication.kt",
+      "tags": [
+        "Application",
+        "应用初始化"
+      ],
+      "summary": "应用的 Application 类，用于全局初始化。",
+      "description": "CommanderApplication 继承自 Android Application 类，提供应用级别的初始化入口点。当前实现仅包含空的 onCreate 方法，预留用于未来的全局配置（如日志、崩溃报告、依赖注入等）。",
+      "tier": "core",
+      "exports": [
+        "CommanderApplication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+      "label": "CommanderHost.kt",
+      "tags": [
+        "导航",
+        "NavHost",
+        "动画",
+        "路由管理"
+      ],
+      "summary": "应用的导航宿主，定义路由和页面转场动画。",
+      "description": "CommanderHost 是基于 Jetpack Navigation Compose 的导航容器，管理三个主要路由：Splash（启动画面）、Terminal（终端主界面）、Settings（设置页面）。实现了精细的转场动画，包括滑动和淡入淡出效果，使用自定义的 Easing 函数（FastOutExtraSlowIn、FastOutSlowIn）模拟 Android Material 动画曲线。定义了 NiriCloseEasing 和 NiriCloseDurationMillis 常量供其他组件使用。",
+      "tier": "ui",
+      "exports": [
+        "CommanderHost",
+        "NiriCloseDurationMillis",
+        "NiriCloseEasing"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt",
+      "label": "LocalStrings.kt",
+      "tags": [
+        "国际化",
+        "本地化",
+        "字符串资源",
+        "多语言"
+      ],
+      "summary": "多语言字符串资源定义和语言选择逻辑。",
+      "description": "该文件定义了应用的多语言支持，包含 Strings 数据类（存储 UI 字符串）和四种语言的翻译：英语、日语、简体中文、繁体中文。stringsFor 函数根据 Locale 返回对应语言的字符串集，支持通过 script 或 country 代码区分简繁中文。LocalStrings 是 CompositionLocal，供 Compose UI 树访问当前语言环境。",
+      "tier": "ui",
+      "exports": [
+        "Strings",
+        "stringsFor",
+        "LocalStrings"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt",
+      "label": "SettingsScreen.kt",
+      "tags": [
+        "设置页面",
+        "UI组件",
+        "Scaffold"
+      ],
+      "summary": "设置界面的 Composable 组件。",
+      "description": "SettingsScreen 是一个空的设置页面框架，使用 Material 3 的 Scaffold 布局。包含带返回按钮的 TopAppBar（使用本地化字符串），主体内容区域当前为空，预留用于未来的设置选项（如主题切换、语言选择、终端配置等）。",
+      "tier": "ui",
+      "exports": [
+        "SettingsScreen"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt",
+      "label": "SplashScreen.kt",
+      "tags": [
+        "启动画面",
+        "动画",
+        "Canvas绘图"
+      ],
+      "summary": "应用启动画面，显示自定义矢量图标并执行淡出动画。",
+      "description": "SplashScreen 使用 Compose Canvas 绘制自定义的 \"<>\" 符号作为应用图标。启动后等待 1 秒，然后执行淡出动画（使用 NiriCloseEasing 和 250ms 时长），动画完成后通过回调导航至终端界面。使用 Animatable 管理透明度状态，图标颜色跟随主题的 onBackground 颜色。",
+      "tier": "ui",
+      "exports": [
+        "SplashScreen"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt",
+      "label": "TerminalScreen.kt",
+      "tags": [
+        "终端界面",
+        "多标签",
+        "工具栏",
+        "命令输入"
+      ],
+      "summary": "终端主界面，包含多标签管理、命令输入工具栏和导航按钮。",
+      "description": "TerminalScreen 是应用的核心界面，实现了终端仿真器的 UI 框架。功能包括：多标签会话管理（TabState）、可滚动的命令输出区域（LazyColumn）、三种工具栏模式（Normal 命令输入、Modifier 修饰键、Navigation 方向键）、浮动工具栏（滚动时自动隐藏/显示）、顶部菜单（新建/重启会话、设置）。当前输出为占位内容，实际终端逻辑待实现。",
+      "tier": "ui",
+      "exports": [
+        "TerminalScreen",
+        "ToolbarMode",
+        "TabState"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/ui/theme/Theme.kt",
+      "label": "Theme.kt",
+      "tags": [
+        "主题",
+        "Material Design",
+        "配色方案"
+      ],
+      "summary": "应用的 Material 3 主题定义。",
+      "description": "Theme.kt 定义了 CommanderTheme Composable 函数，提供明暗两套配色方案（使用 Material 3 默认的 darkColorScheme 和 lightColorScheme）。ThemeMode 枚举定义了三种主题模式：Light、Dark、System（跟随系统）。主题通过 MaterialTheme 应用到整个 Compose 树。",
+      "tier": "ui",
+      "exports": [
+        "CommanderTheme",
+        "ThemeMode"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:build.gradle.kts",
+      "label": "build.gradle.kts",
+      "tags": [
+        "根构建配置",
+        "Gradle插件"
+      ],
+      "summary": "项目根目录的 Gradle 构建配置。",
+      "description": "根级别的 Gradle 构建文件，声明了应用于项目的插件版本：Android Gradle Plugin 9.2.1（apply false）和 Kotlin Compose Plugin 2.2.20（apply false）。这些插件在子模块中实际应用。",
+      "tier": "infra",
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:settings.gradle.kts",
+      "label": "settings.gradle.kts",
+      "tags": [
+        "Gradle设置",
+        "仓库配置",
+        "模块定义"
+      ],
+      "summary": "Gradle 项目设置文件，配置仓库和包含的模块。",
+      "description": "Gradle 设置文件定义了项目结构和依赖解析策略。配置了 Maven 仓库（Google、Maven Central、Gradle Plugin Portal），启用了 foojay-resolver 插件用于自动下载 JDK，设置项目名称为 \"Commander\"，并包含了 \"app\" 模块。使用 FAIL_ON_PROJECT_REPOS 模式确保依赖来自中央仓库。",
+      "tier": "infra",
+      "complexity": "moderate"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+      "label": "托管导航",
+      "edgeType": "uses",
+      "direction": "forward"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt",
+      "label": "提供本地化上下文",
+      "edgeType": "uses",
+      "direction": "forward"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/ui/theme/Theme.kt",
+      "label": "应用主题",
+      "edgeType": "uses",
+      "direction": "forward"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt",
+      "label": "启动画面路由",
+      "edgeType": "routes",
+      "direction": "forward"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt",
+      "label": "终端界面路由",
+      "edgeType": "routes",
+      "direction": "forward"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt",
+      "label": "设置页面路由",
+      "edgeType": "routes",
+      "direction": "forward"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+      "label": "使用动画常量",
+      "edgeType": "uses",
+      "direction": "forward"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt",
+      "label": "读取本地化字符串",
+      "edgeType": "uses",
+      "direction": "forward"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt",
+      "label": "读取本地化字符串",
+      "edgeType": "uses",
+      "direction": "forward"
+    },
+    {
+      "source": "file:settings.gradle.kts",
+      "target": "file:app/build.gradle.kts",
+      "label": "包含应用模块",
+      "edgeType": "includes",
+      "direction": "forward"
+    }
+  ]
+}

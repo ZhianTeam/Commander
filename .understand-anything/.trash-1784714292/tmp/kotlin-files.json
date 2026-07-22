@@ -1,0 +1,68 @@
+[
+  {
+    "path": "app/build.gradle.kts",
+    "language": "kotlin",
+    "sizeLines": 85,
+    "fileCategory": "code"
+  },
+  {
+    "path": "app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+    "language": "kotlin",
+    "sizeLines": 61,
+    "fileCategory": "code"
+  },
+  {
+    "path": "app/src/main/java/org/zhian/commander/CommanderApplication.kt",
+    "language": "kotlin",
+    "sizeLines": 10,
+    "fileCategory": "code"
+  },
+  {
+    "path": "app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+    "language": "kotlin",
+    "sizeLines": 170,
+    "fileCategory": "code"
+  },
+  {
+    "path": "app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt",
+    "language": "kotlin",
+    "sizeLines": 46,
+    "fileCategory": "code"
+  },
+  {
+    "path": "app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt",
+    "language": "kotlin",
+    "sizeLines": 48,
+    "fileCategory": "code"
+  },
+  {
+    "path": "app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt",
+    "language": "kotlin",
+    "sizeLines": 77,
+    "fileCategory": "code"
+  },
+  {
+    "path": "app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt",
+    "language": "kotlin",
+    "sizeLines": 334,
+    "fileCategory": "code"
+  },
+  {
+    "path": "app/src/main/java/org/zhian/commander/ui/theme/Theme.kt",
+    "language": "kotlin",
+    "sizeLines": 27,
+    "fileCategory": "code"
+  },
+  {
+    "path": "build.gradle.kts",
+    "language": "kotlin",
+    "sizeLines": 4,
+    "fileCategory": "code"
+  },
+  {
+    "path": "settings.gradle.kts",
+    "language": "kotlin",
+    "sizeLines": 23,
+    "fileCategory": "code"
+  }
+]

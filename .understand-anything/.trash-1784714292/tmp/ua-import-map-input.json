@@ -1,0 +1,1865 @@
+{
+  "projectRoot": "/home/longbin/Zhian/Commander",
+  "files": [
+    {
+      "path": ".agents/skills/iyu-v3/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 18153,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-before-dev/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 40,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-brainstorm/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 173,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-break-loop/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 188,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-channel/references/command-reference.md",
+      "language": "markdown",
+      "sizeLines": 480,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-channel/references/forum.md",
+      "language": "markdown",
+      "sizeLines": 233,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-channel/references/progress-debugging.md",
+      "language": "markdown",
+      "sizeLines": 226,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-channel/references/workers.md",
+      "language": "markdown",
+      "sizeLines": 276,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-channel/references/workflows.md",
+      "language": "markdown",
+      "sizeLines": 128,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-channel/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 67,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-check/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 98,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-continue/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 61,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-finish-work/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 71,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/customize-local/add-project-local-conventions.md",
+      "language": "markdown",
+      "sizeLines": 83,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/customize-local/change-agents.md",
+      "language": "markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "language": "markdown",
+      "sizeLines": 84,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/customize-local/change-hooks.md",
+      "language": "markdown",
+      "sizeLines": 57,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/customize-local/change-skills-or-commands.md",
+      "language": "markdown",
+      "sizeLines": 123,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/customize-local/change-spec-structure.md",
+      "language": "markdown",
+      "sizeLines": 83,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/customize-local/change-task-lifecycle.md",
+      "language": "markdown",
+      "sizeLines": 90,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "language": "markdown",
+      "sizeLines": 65,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/customize-local/overview.md",
+      "language": "markdown",
+      "sizeLines": 55,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/local-architecture/bundled-skills.md",
+      "language": "markdown",
+      "sizeLines": 146,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "language": "markdown",
+      "sizeLines": 68,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/local-architecture/generated-files.md",
+      "language": "markdown",
+      "sizeLines": 80,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/local-architecture/multi-agent-channel.md",
+      "language": "markdown",
+      "sizeLines": 69,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/local-architecture/overview.md",
+      "language": "markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/local-architecture/spec-system.md",
+      "language": "markdown",
+      "sizeLines": 102,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/local-architecture/task-system.md",
+      "language": "markdown",
+      "sizeLines": 130,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/local-architecture/workflow.md",
+      "language": "markdown",
+      "sizeLines": 75,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/local-architecture/workspace-memory.md",
+      "language": "markdown",
+      "sizeLines": 71,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/platform-files/agents.md",
+      "language": "markdown",
+      "sizeLines": 82,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/platform-files/hooks-and-settings.md",
+      "language": "markdown",
+      "sizeLines": 72,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/platform-files/overview.md",
+      "language": "markdown",
+      "sizeLines": 59,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/platform-files/platform-map.md",
+      "language": "markdown",
+      "sizeLines": 88,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/references/platform-files/skills-and-commands.md",
+      "language": "markdown",
+      "sizeLines": 85,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-meta/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 85,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-session-insight/references/cli-quick-reference.md",
+      "language": "markdown",
+      "sizeLines": 65,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-session-insight/references/triggering-patterns.md",
+      "language": "markdown",
+      "sizeLines": 93,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-session-insight/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 81,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-spec-bootstrap/references/mcp-setup.md",
+      "language": "markdown",
+      "sizeLines": 90,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-spec-bootstrap/references/repository-analysis.md",
+      "language": "markdown",
+      "sizeLines": 59,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-spec-bootstrap/references/spec-task-planning.md",
+      "language": "markdown",
+      "sizeLines": 61,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-spec-bootstrap/references/spec-writing.md",
+      "language": "markdown",
+      "sizeLines": 70,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-spec-bootstrap/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 41,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-start/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 64,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".agents/skills/trellis-update-spec/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 356,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/agents/trellis-check.md",
+      "language": "markdown",
+      "sizeLines": 115,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/agents/trellis-implement.md",
+      "language": "markdown",
+      "sizeLines": 110,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/agents/trellis-research.md",
+      "language": "markdown",
+      "sizeLines": 137,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/commands/trellis/continue.md",
+      "language": "markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/commands/trellis/finish-work.md",
+      "language": "markdown",
+      "sizeLines": 66,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/hooks/inject-subagent-context.py",
+      "language": "python",
+      "sizeLines": 771,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".claude/hooks/inject-workflow-state.py",
+      "language": "python",
+      "sizeLines": 408,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".claude/hooks/session-start.py",
+      "language": "python",
+      "sizeLines": 844,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".claude/hooks/statusline.py",
+      "language": "python",
+      "sizeLines": 324,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".claude/settings.json",
+      "language": "json",
+      "sizeLines": 77,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".claude/skills/iyu-v3/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 18153,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-before-dev/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 40,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-brainstorm/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 173,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-break-loop/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 188,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-channel/references/command-reference.md",
+      "language": "markdown",
+      "sizeLines": 480,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-channel/references/forum.md",
+      "language": "markdown",
+      "sizeLines": 233,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-channel/references/progress-debugging.md",
+      "language": "markdown",
+      "sizeLines": 226,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-channel/references/workers.md",
+      "language": "markdown",
+      "sizeLines": 276,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-channel/references/workflows.md",
+      "language": "markdown",
+      "sizeLines": 128,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-channel/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 67,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-check/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 98,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/customize-local/add-project-local-conventions.md",
+      "language": "markdown",
+      "sizeLines": 83,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/customize-local/change-agents.md",
+      "language": "markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "language": "markdown",
+      "sizeLines": 84,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/customize-local/change-hooks.md",
+      "language": "markdown",
+      "sizeLines": 57,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/customize-local/change-skills-or-commands.md",
+      "language": "markdown",
+      "sizeLines": 123,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/customize-local/change-spec-structure.md",
+      "language": "markdown",
+      "sizeLines": 83,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/customize-local/change-task-lifecycle.md",
+      "language": "markdown",
+      "sizeLines": 90,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "language": "markdown",
+      "sizeLines": 65,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/customize-local/overview.md",
+      "language": "markdown",
+      "sizeLines": 55,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/local-architecture/bundled-skills.md",
+      "language": "markdown",
+      "sizeLines": 146,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "language": "markdown",
+      "sizeLines": 68,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/local-architecture/generated-files.md",
+      "language": "markdown",
+      "sizeLines": 80,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/local-architecture/multi-agent-channel.md",
+      "language": "markdown",
+      "sizeLines": 69,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/local-architecture/overview.md",
+      "language": "markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/local-architecture/spec-system.md",
+      "language": "markdown",
+      "sizeLines": 102,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/local-architecture/task-system.md",
+      "language": "markdown",
+      "sizeLines": 130,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/local-architecture/workflow.md",
+      "language": "markdown",
+      "sizeLines": 75,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/local-architecture/workspace-memory.md",
+      "language": "markdown",
+      "sizeLines": 71,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/platform-files/agents.md",
+      "language": "markdown",
+      "sizeLines": 82,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/platform-files/hooks-and-settings.md",
+      "language": "markdown",
+      "sizeLines": 72,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/platform-files/overview.md",
+      "language": "markdown",
+      "sizeLines": 59,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/platform-files/platform-map.md",
+      "language": "markdown",
+      "sizeLines": 88,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/references/platform-files/skills-and-commands.md",
+      "language": "markdown",
+      "sizeLines": 85,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-meta/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 85,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-session-insight/references/cli-quick-reference.md",
+      "language": "markdown",
+      "sizeLines": 65,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-session-insight/references/triggering-patterns.md",
+      "language": "markdown",
+      "sizeLines": 93,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-session-insight/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 81,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-spec-bootstrap/references/mcp-setup.md",
+      "language": "markdown",
+      "sizeLines": 90,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-spec-bootstrap/references/repository-analysis.md",
+      "language": "markdown",
+      "sizeLines": 59,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-spec-bootstrap/references/spec-task-planning.md",
+      "language": "markdown",
+      "sizeLines": 61,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-spec-bootstrap/references/spec-writing.md",
+      "language": "markdown",
+      "sizeLines": 70,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-spec-bootstrap/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 41,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".claude/skills/trellis-update-spec/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 356,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".codex/agents/trellis-check.toml",
+      "language": "toml",
+      "sizeLines": 84,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".codex/agents/trellis-implement.toml",
+      "language": "toml",
+      "sizeLines": 65,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".codex/agents/trellis-research.toml",
+      "language": "toml",
+      "sizeLines": 73,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".codex/config.toml",
+      "language": "toml",
+      "sizeLines": 28,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".codex/hooks.json",
+      "language": "json",
+      "sizeLines": 15,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".codex/hooks/inject-workflow-state.py",
+      "language": "python",
+      "sizeLines": 408,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".codex/hooks/session-start.py",
+      "language": "python",
+      "sizeLines": 545,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".cursor/agents/trellis-check.md",
+      "language": "markdown",
+      "sizeLines": 114,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/agents/trellis-implement.md",
+      "language": "markdown",
+      "sizeLines": 109,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/agents/trellis-research.md",
+      "language": "markdown",
+      "sizeLines": 136,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/commands/trellis-continue.md",
+      "language": "markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/commands/trellis-finish-work.md",
+      "language": "markdown",
+      "sizeLines": 66,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/hooks.json",
+      "language": "json",
+      "sizeLines": 24,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".cursor/hooks/inject-shell-session-context.py",
+      "language": "python",
+      "sizeLines": 183,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".cursor/hooks/inject-subagent-context.py",
+      "language": "python",
+      "sizeLines": 771,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".cursor/hooks/session-start.py",
+      "language": "python",
+      "sizeLines": 844,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".cursor/skills/trellis-before-dev/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 40,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-brainstorm/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 173,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-break-loop/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 188,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-channel/references/command-reference.md",
+      "language": "markdown",
+      "sizeLines": 480,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-channel/references/forum.md",
+      "language": "markdown",
+      "sizeLines": 233,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-channel/references/progress-debugging.md",
+      "language": "markdown",
+      "sizeLines": 226,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-channel/references/workers.md",
+      "language": "markdown",
+      "sizeLines": 276,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-channel/references/workflows.md",
+      "language": "markdown",
+      "sizeLines": 128,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-channel/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 67,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-check/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 98,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/customize-local/add-project-local-conventions.md",
+      "language": "markdown",
+      "sizeLines": 83,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/customize-local/change-agents.md",
+      "language": "markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "language": "markdown",
+      "sizeLines": 84,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/customize-local/change-hooks.md",
+      "language": "markdown",
+      "sizeLines": 57,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/customize-local/change-skills-or-commands.md",
+      "language": "markdown",
+      "sizeLines": 123,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/customize-local/change-spec-structure.md",
+      "language": "markdown",
+      "sizeLines": 83,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/customize-local/change-task-lifecycle.md",
+      "language": "markdown",
+      "sizeLines": 90,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "language": "markdown",
+      "sizeLines": 65,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/customize-local/overview.md",
+      "language": "markdown",
+      "sizeLines": 55,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/local-architecture/bundled-skills.md",
+      "language": "markdown",
+      "sizeLines": 146,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "language": "markdown",
+      "sizeLines": 68,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/local-architecture/generated-files.md",
+      "language": "markdown",
+      "sizeLines": 80,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/local-architecture/multi-agent-channel.md",
+      "language": "markdown",
+      "sizeLines": 69,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/local-architecture/overview.md",
+      "language": "markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/local-architecture/spec-system.md",
+      "language": "markdown",
+      "sizeLines": 102,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/local-architecture/task-system.md",
+      "language": "markdown",
+      "sizeLines": 130,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/local-architecture/workflow.md",
+      "language": "markdown",
+      "sizeLines": 75,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/local-architecture/workspace-memory.md",
+      "language": "markdown",
+      "sizeLines": 71,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/platform-files/agents.md",
+      "language": "markdown",
+      "sizeLines": 82,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/platform-files/hooks-and-settings.md",
+      "language": "markdown",
+      "sizeLines": 72,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/platform-files/overview.md",
+      "language": "markdown",
+      "sizeLines": 59,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/platform-files/platform-map.md",
+      "language": "markdown",
+      "sizeLines": 88,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/references/platform-files/skills-and-commands.md",
+      "language": "markdown",
+      "sizeLines": 85,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-meta/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 85,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-session-insight/references/cli-quick-reference.md",
+      "language": "markdown",
+      "sizeLines": 65,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-session-insight/references/triggering-patterns.md",
+      "language": "markdown",
+      "sizeLines": 93,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-session-insight/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 81,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-spec-bootstrap/references/mcp-setup.md",
+      "language": "markdown",
+      "sizeLines": 90,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-spec-bootstrap/references/repository-analysis.md",
+      "language": "markdown",
+      "sizeLines": 59,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-spec-bootstrap/references/spec-task-planning.md",
+      "language": "markdown",
+      "sizeLines": 61,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-spec-bootstrap/references/spec-writing.md",
+      "language": "markdown",
+      "sizeLines": 70,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-spec-bootstrap/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 41,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".cursor/skills/trellis-update-spec/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 356,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".gemini/agents/trellis-check.md",
+      "language": "markdown",
+      "sizeLines": 133,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".gemini/agents/trellis-implement.md",
+      "language": "markdown",
+      "sizeLines": 128,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".gemini/agents/trellis-research.md",
+      "language": "markdown",
+      "sizeLines": 136,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".gemini/commands/trellis/continue.toml",
+      "language": "toml",
+      "sizeLines": 61,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".gemini/commands/trellis/finish-work.toml",
+      "language": "toml",
+      "sizeLines": 71,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".gemini/hooks/inject-workflow-state.py",
+      "language": "python",
+      "sizeLines": 408,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".gemini/hooks/session-start.py",
+      "language": "python",
+      "sizeLines": 844,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".gemini/settings.json",
+      "language": "json",
+      "sizeLines": 28,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".gitattributes",
+      "language": "unknown",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".github/agents/trellis-check.agent.md",
+      "language": "markdown",
+      "sizeLines": 144,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/agents/trellis-implement.agent.md",
+      "language": "markdown",
+      "sizeLines": 139,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/agents/trellis-research.agent.md",
+      "language": "markdown",
+      "sizeLines": 143,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/copilot/hooks.json",
+      "language": "json",
+      "sizeLines": 19,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".github/copilot/hooks/inject-workflow-state.py",
+      "language": "python",
+      "sizeLines": 408,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".github/copilot/hooks/session-start.py",
+      "language": "python",
+      "sizeLines": 547,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".github/hooks/trellis.json",
+      "language": "json",
+      "sizeLines": 19,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".github/prompts/continue.prompt.md",
+      "language": "markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/prompts/finish-work.prompt.md",
+      "language": "markdown",
+      "sizeLines": 66,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-before-dev/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 40,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-brainstorm/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 173,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-break-loop/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 188,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-channel/references/command-reference.md",
+      "language": "markdown",
+      "sizeLines": 480,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-channel/references/forum.md",
+      "language": "markdown",
+      "sizeLines": 233,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-channel/references/progress-debugging.md",
+      "language": "markdown",
+      "sizeLines": 226,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-channel/references/workers.md",
+      "language": "markdown",
+      "sizeLines": 276,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-channel/references/workflows.md",
+      "language": "markdown",
+      "sizeLines": 128,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-channel/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 67,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-check/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 98,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/customize-local/add-project-local-conventions.md",
+      "language": "markdown",
+      "sizeLines": 83,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/customize-local/change-agents.md",
+      "language": "markdown",
+      "sizeLines": 56,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/customize-local/change-context-loading.md",
+      "language": "markdown",
+      "sizeLines": 84,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/customize-local/change-hooks.md",
+      "language": "markdown",
+      "sizeLines": 57,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/customize-local/change-skills-or-commands.md",
+      "language": "markdown",
+      "sizeLines": 123,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/customize-local/change-spec-structure.md",
+      "language": "markdown",
+      "sizeLines": 83,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/customize-local/change-task-lifecycle.md",
+      "language": "markdown",
+      "sizeLines": 90,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/customize-local/change-workflow.md",
+      "language": "markdown",
+      "sizeLines": 65,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/customize-local/overview.md",
+      "language": "markdown",
+      "sizeLines": 55,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/local-architecture/bundled-skills.md",
+      "language": "markdown",
+      "sizeLines": 146,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/local-architecture/context-injection.md",
+      "language": "markdown",
+      "sizeLines": 68,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/local-architecture/generated-files.md",
+      "language": "markdown",
+      "sizeLines": 80,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/local-architecture/multi-agent-channel.md",
+      "language": "markdown",
+      "sizeLines": 69,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/local-architecture/overview.md",
+      "language": "markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/local-architecture/spec-system.md",
+      "language": "markdown",
+      "sizeLines": 102,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/local-architecture/task-system.md",
+      "language": "markdown",
+      "sizeLines": 130,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/local-architecture/workflow.md",
+      "language": "markdown",
+      "sizeLines": 75,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/local-architecture/workspace-memory.md",
+      "language": "markdown",
+      "sizeLines": 71,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/platform-files/agents.md",
+      "language": "markdown",
+      "sizeLines": 82,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/platform-files/hooks-and-settings.md",
+      "language": "markdown",
+      "sizeLines": 72,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/platform-files/overview.md",
+      "language": "markdown",
+      "sizeLines": 59,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/platform-files/platform-map.md",
+      "language": "markdown",
+      "sizeLines": 88,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/references/platform-files/skills-and-commands.md",
+      "language": "markdown",
+      "sizeLines": 85,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-meta/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 85,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-session-insight/references/cli-quick-reference.md",
+      "language": "markdown",
+      "sizeLines": 65,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-session-insight/references/triggering-patterns.md",
+      "language": "markdown",
+      "sizeLines": 93,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-session-insight/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 81,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-spec-bootstrap/references/mcp-setup.md",
+      "language": "markdown",
+      "sizeLines": 90,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-spec-bootstrap/references/repository-analysis.md",
+      "language": "markdown",
+      "sizeLines": 59,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-spec-bootstrap/references/spec-task-planning.md",
+      "language": "markdown",
+      "sizeLines": 61,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-spec-bootstrap/references/spec-writing.md",
+      "language": "markdown",
+      "sizeLines": 70,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-spec-bootstrap/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 41,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".github/skills/trellis-update-spec/SKILL.md",
+      "language": "markdown",
+      "sizeLines": 356,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".serena/memories/conventions.md",
+      "language": "markdown",
+      "sizeLines": 60,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".serena/memories/core.md",
+      "language": "markdown",
+      "sizeLines": 46,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".serena/memories/memory_maintenance.md",
+      "language": "markdown",
+      "sizeLines": 32,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".serena/memories/suggested_commands.md",
+      "language": "markdown",
+      "sizeLines": 84,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".serena/memories/task_completion.md",
+      "language": "markdown",
+      "sizeLines": 92,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".serena/memories/tech_stack.md",
+      "language": "markdown",
+      "sizeLines": 50,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".serena/project.yml",
+      "language": "yaml",
+      "sizeLines": 167,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".trellis/.template-hashes.json",
+      "language": "json",
+      "sizeLines": 255,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".trellis/.version",
+      "language": "unknown",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/agents/check.md",
+      "language": "markdown",
+      "sizeLines": 70,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".trellis/agents/implement.md",
+      "language": "markdown",
+      "sizeLines": 71,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".trellis/config.yaml",
+      "language": "yaml",
+      "sizeLines": 110,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".trellis/scripts/__init__.py",
+      "language": "python",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/add_session.py",
+      "language": "python",
+      "sizeLines": 567,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/__init__.py",
+      "language": "python",
+      "sizeLines": 92,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/active_task.py",
+      "language": "python",
+      "sizeLines": 628,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/cli_adapter.py",
+      "language": "python",
+      "sizeLines": 851,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/config.py",
+      "language": "python",
+      "sizeLines": 445,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/developer.py",
+      "language": "python",
+      "sizeLines": 190,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/git_context.py",
+      "language": "python",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/git.py",
+      "language": "python",
+      "sizeLines": 31,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/io.py",
+      "language": "python",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/log.py",
+      "language": "python",
+      "sizeLines": 45,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/packages_context.py",
+      "language": "python",
+      "sizeLines": 238,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/paths.py",
+      "language": "python",
+      "sizeLines": 447,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/safe_commit.py",
+      "language": "python",
+      "sizeLines": 315,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/session_context.py",
+      "language": "python",
+      "sizeLines": 821,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/task_context.py",
+      "language": "python",
+      "sizeLines": 223,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/task_queue.py",
+      "language": "python",
+      "sizeLines": 188,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/task_store.py",
+      "language": "python",
+      "sizeLines": 747,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/task_utils.py",
+      "language": "python",
+      "sizeLines": 274,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/tasks.py",
+      "language": "python",
+      "sizeLines": 112,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/trellis_config.py",
+      "language": "python",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/types.py",
+      "language": "python",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/common/workflow_phase.py",
+      "language": "python",
+      "sizeLines": 212,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/get_context.py",
+      "language": "python",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/get_developer.py",
+      "language": "python",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/hooks/linear_sync.py",
+      "language": "python",
+      "sizeLines": 243,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/init_developer.py",
+      "language": "python",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/scripts/task.py",
+      "language": "python",
+      "sizeLines": 500,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".trellis/spec/backend/database-guidelines.md",
+      "language": "markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".trellis/spec/backend/directory-structure.md",
+      "language": "markdown",
+      "sizeLines": 54,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".trellis/spec/backend/error-handling.md",
+      "language": "markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".trellis/spec/backend/index.md",
+      "language": "markdown",
+      "sizeLines": 38,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".trellis/spec/backend/logging-guidelines.md",
+      "language": "markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".trellis/spec/backend/quality-guidelines.md",
+      "language": "markdown",
+      "sizeLines": 51,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".trellis/spec/guides/code-reuse-thinking-guide.md",
+      "language": "markdown",
+      "sizeLines": 223,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".trellis/spec/guides/cross-layer-thinking-guide.md",
+      "language": "markdown",
+      "sizeLines": 327,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".trellis/spec/guides/index.md",
+      "language": "markdown",
+      "sizeLines": 97,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".trellis/tasks/00-bootstrap-guidelines/prd.md",
+      "language": "markdown",
+      "sizeLines": 126,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".trellis/tasks/00-bootstrap-guidelines/task.json",
+      "language": "json",
+      "sizeLines": 27,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".trellis/workflow.md",
+      "language": "markdown",
+      "sizeLines": 708,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".trellis/workspace/fywmjj/index.md",
+      "language": "markdown",
+      "sizeLines": 40,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".trellis/workspace/fywmjj/journal-1.md",
+      "language": "markdown",
+      "sizeLines": 7,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".trellis/workspace/index.md",
+      "language": "markdown",
+      "sizeLines": 125,
+      "fileCategory": "docs"
+    },
+    {
+      "path": ".understand-anything/.understandignore",
+      "language": "unknown",
+      "sizeLines": 62,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".understand-anything/intermediate/scan-result.json",
+      "language": "json",
+      "sizeLines": 412,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/build.gradle.kts",
+      "language": "kotlin",
+      "sizeLines": 85,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/AndroidManifest.xml",
+      "language": "xml",
+      "sizeLines": 82,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+      "language": "kotlin",
+      "sizeLines": 61,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/org/zhian/commander/CommanderApplication.kt",
+      "language": "kotlin",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+      "language": "kotlin",
+      "sizeLines": 170,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt",
+      "language": "kotlin",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt",
+      "language": "kotlin",
+      "sizeLines": 48,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt",
+      "language": "kotlin",
+      "sizeLines": 77,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt",
+      "language": "kotlin",
+      "sizeLines": 334,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/java/org/zhian/commander/ui/theme/Theme.kt",
+      "language": "kotlin",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_launcher_foreground.xml",
+      "language": "xml",
+      "sizeLines": 14,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/drawable/ic_launcher_monochrome.xml",
+      "language": "xml",
+      "sizeLines": 16,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/i_round.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/mipmap-anydpi-v26/i.xml",
+      "language": "xml",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/values/strings.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/values/themes.xml",
+      "language": "xml",
+      "sizeLines": 7,
+      "fileCategory": "config"
+    },
+    {
+      "path": "app/src/main/res/xml/file_paths.xml",
+      "language": "xml",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": "build.gradle.kts",
+      "language": "kotlin",
+      "sizeLines": 4,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gradle.properties",
+      "language": "properties",
+      "sizeLines": 6,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gradle/libs.versions.toml",
+      "language": "toml",
+      "sizeLines": 11,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.jar",
+      "language": "jar",
+      "sizeLines": 180,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gradle/wrapper/gradle-wrapper.properties",
+      "language": "properties",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "gradlew",
+      "language": "unknown",
+      "sizeLines": 248,
+      "fileCategory": "code"
+    },
+    {
+      "path": "gradlew.bat",
+      "language": "batch",
+      "sizeLines": 82,
+      "fileCategory": "script"
+    },
+    {
+      "path": "oldie/AndroidManifest.xml",
+      "language": "xml",
+      "sizeLines": 15,
+      "fileCategory": "config"
+    },
+    {
+      "path": "oldie/apk/assets/extra_conf1g.xml",
+      "language": "xml",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": "oldie/build.xml",
+      "language": "xml",
+      "sizeLines": 9,
+      "fileCategory": "config"
+    },
+    {
+      "path": "oldie/sdk/iapp.sdk",
+      "language": "sdk",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "oldie/src/mian.iyu",
+      "language": "iyu",
+      "sizeLines": 176,
+      "fileCategory": "code"
+    },
+    {
+      "path": "oldie/src/shellExec.mjava",
+      "language": "mjava",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 141,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "settings.gradle.kts",
+      "language": "kotlin",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    }
+  ]
+}

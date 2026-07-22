@@ -1,0 +1,204 @@
+{
+  "layers": [
+    {
+      "id": "layer:application",
+      "name": "应用入口层",
+      "description": "Android 应用的入口点和全局配置，负责应用生命周期管理、Activity 初始化和全局状态设置",
+      "color": "#FF6B6B",
+      "members": [
+        "file:app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+        "file:app/src/main/java/org/zhian/commander/CommanderApplication.kt"
+      ],
+      "languageNotes": "这一层是 Android 应用的最外层，包含 Activity 和 Application 类。CommanderActivity 负责设置 edge-to-edge 显示、主题模式、本地化环境，并初始化 Compose UI。这是用户看到的第一个入口点。",
+      "languageLesson": "Application 层是 Android 应用架构的顶层，所有的应用级配置（如主题、语言、全局状态）都在这里初始化。Activity 是 UI 的宿主容器，负责将业务逻辑和视图层连接起来。"
+    },
+    {
+      "id": "layer:navigation",
+      "name": "导航路由层",
+      "description": "管理应用内的页面导航、路由定义和转场动画，使用 Jetpack Navigation Compose 实现声明式导航",
+      "color": "#4ECDC4",
+      "members": [
+        "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt"
+      ],
+      "languageNotes": "导航层定义了应用的三个主要路由：启动画面（Splash）、终端界面（Terminal）和设置界面（Settings）。它实现了自定义的转场动画（基于 Material Design 的 FastOutExtraSlowIn 缓动曲线），提供流畅的页面切换体验。CommanderHost 是导航的中心节点，接收状态参数（如语言、主题）并传递给各个页面。",
+      "languageLesson": "Navigation 层是单 Activity 多屏幕架构的核心。在 Jetpack Compose 中，NavHost 充当容器，composable() 定义路由。这种声明式导航方式比传统的 Fragment 事务更简洁，且支持类型安全的参数传递。"
+    },
+    {
+      "id": "layer:ui-screens",
+      "name": "界面页面层",
+      "description": "各个功能页面的 Composable 实现，包括启动画面、终端主界面和设置界面，负责具体的 UI 布局和用户交互",
+      "color": "#95E1D3",
+      "members": [
+        "file:app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt",
+        "file:app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt",
+        "file:app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt"
+      ],
+      "languageNotes": "Screen 层是用户直接交互的界面。TerminalScreen 是应用的核心页面，实现了多标签终端管理、命令输入工具栏、修饰键面板和导航键面板。它使用了 Scaffold 布局、TopAppBar、LazyColumn（虚拟滚动列表）和 FloatingActionButton。SplashScreen 负责启动过渡，SettingsScreen 提供配置选项。每个 Screen 都是独立的 Composable 函数，通过回调函数（如 onNavigateToSettings）与导航层通信。",
+      "languageLesson": "Screen 组件是 UI 的顶层容器，通常对应一个完整的页面。在 Jetpack Compose 中，Screen 应该是无状态的（stateless）或提升状态（state hoisting），将状态管理交给 ViewModel 或上层组件。这样可以提高可测试性和复用性。"
+    },
+    {
+      "id": "layer:ui-theme",
+      "name": "主题样式层",
+      "description": "Material Design 3 主题定义，包括配色方案、形状、排版和明暗模式支持",
+      "color": "#F38181",
+      "members": [
+        "file:app/src/main/java/org/zhian/commander/ui/theme/Theme.kt"
+      ],
+      "languageNotes": "主题层定义了应用的视觉风格。CommanderTheme 提供了 Material Design 3 的配色方案（lightColorScheme 和 darkColorScheme），支持系统主题切换。这一层通过 MaterialTheme 包裹整个应用，使得所有 UI 组件都能访问统一的颜色、形状和排版设置。",
+      "languageLesson": "Theme 是 Compose UI 的设计系统基础。MaterialTheme 提供了 colorScheme、typography、shapes 等属性，组件可以通过 MaterialTheme.colorScheme.primary 等方式访问。明暗模式切换只需更换 colorScheme，所有组件自动响应。"
+    },
+    {
+      "id": "layer:ui-locale",
+      "name": "国际化层",
+      "description": "多语言字符串资源管理和语言切换逻辑，支持中文和英文界面",
+      "color": "#AA96DA",
+      "members": [
+        "file:app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt"
+      ],
+      "languageNotes": "国际化层定义了应用的所有文本字符串，使用 Compose 的 CompositionLocal 机制。LocalStrings 提供了当前语言的字符串对象，stringsFor() 函数根据 Locale 返回对应语言的字符串集合。这种方式比 Android 传统的 strings.xml 更类型安全，且支持动态语言切换而无需重启 Activity。",
+      "languageLesson": "CompositionLocal 是 Compose 中的依赖注入机制，可以在组件树中隐式传递数据（如主题、字符串、配置）。通过 CompositionLocalProvider 设置值，子组件通过 LocalXxx.current 访问。这避免了层层传递参数的麻烦。"
+    },
+    {
+      "id": "layer:build-config",
+      "name": "构建配置层",
+      "description": "Gradle 构建脚本和项目配置，定义依赖项、编译选项和构建变体",
+      "color": "#FCBAD3",
+      "members": [
+        "file:app/build.gradle.kts",
+        "file:build.gradle.kts",
+        "file:settings.gradle.kts"
+      ],
+      "languageNotes": "构建层使用 Kotlin DSL 编写 Gradle 脚本。app/build.gradle.kts 定义了应用模块的配置（如 compileSdk、minSdk、依赖项），build.gradle.kts 定义了项目级插件，settings.gradle.kts 定义了仓库和模块结构。这一层是代码能够编译和运行的基础。",
+      "languageLesson": "Gradle 是 Android 项目的构建系统。Kotlin DSL（.gradle.kts）比 Groovy DSL 更类型安全，有更好的 IDE 支持。依赖管理使用版本目录（libs.versions.toml）可以统一管理多模块项目的依赖版本。"
+    },
+    {
+      "id": "layer:resources",
+      "name": "资源文件层",
+      "description": "Android 资源文件，包括应用图标、字符串、主题 XML 和配置文件",
+      "color": "#FFFFD2",
+      "members": [
+        "file:app/src/main/res/values/strings.xml",
+        "file:app/src/main/res/values/themes.xml",
+        "file:app/src/main/res/xml/file_paths.xml",
+        "file:app/src/main/res/drawable/ic_launcher_foreground.xml",
+        "file:app/src/main/res/drawable/ic_launcher_monochrome.xml",
+        "file:app/src/main/res/mipmap-mdpi/i.png",
+        "file:app/src/main/res/mipmap-hdpi/i.png",
+        "file:app/src/main/res/mipmap-xhdpi/i.png",
+        "file:app/src/main/res/mipmap-xxhdpi/i.png",
+        "file:app/src/main/res/mipmap-xxxhdpi/i.png",
+        "file:app/src/main/res/mipmap-anydpi-v26/i.xml",
+        "file:app/src/main/res/mipmap-anydpi-v26/i_round.xml"
+      ],
+      "languageNotes": "资源层包含了所有非代码资源。虽然应用使用 Compose 作为主要 UI 框架，但仍需要传统的 Android 资源文件：应用图标（mipmap）、启动器图标（drawable）、主题定义（themes.xml）、默认字符串（strings.xml）和文件路径配置（file_paths.xml）。图标文件根据不同屏幕密度（mdpi、hdpi、xhdpi 等）提供多个版本，确保在各种设备上都有清晰的显示效果。",
+      "languageLesson": "Android 资源系统支持多密度图片、多语言字符串、不同屏幕尺寸的布局等。即使使用 Compose，资源文件仍然是必需的（如 AndroidManifest.xml、应用图标）。mipmap 用于启动器图标，drawable 用于普通图片。anydpi-v26 表示自适应图标（Adaptive Icon），支持不同形状的启动器。"
+    },
+    {
+      "id": "layer:manifest",
+      "name": "清单配置层",
+      "description": "AndroidManifest.xml 和应用级元数据配置，声明权限、组件和应用属性",
+      "color": "#A8D8EA",
+      "members": [
+        "file:app/src/main/AndroidManifest.xml"
+      ],
+      "languageNotes": "AndroidManifest.xml 是 Android 应用的核心配置文件，声明了应用的包名、Application 类、Activity、权限需求、意图过滤器等。这是 Android 系统识别和启动应用的入口。",
+      "languageLesson": "Manifest 是应用的身份证，定义了应用的所有组件（Activity、Service、BroadcastReceiver、ContentProvider）。任何在代码中定义的组件必须在 Manifest 中声明才能被系统识别。权限声明（uses-permission）也必须在这里定义。"
+    }
+  ],
+  "layerDependencies": [
+    {
+      "from": "layer:application",
+      "to": "layer:navigation",
+      "reason": "CommanderActivity 调用 CommanderHost 初始化导航系统"
+    },
+    {
+      "from": "layer:application",
+      "to": "layer:ui-theme",
+      "reason": "CommanderActivity 使用 CommanderTheme 设置应用主题"
+    },
+    {
+      "from": "layer:application",
+      "to": "layer:ui-locale",
+      "reason": "CommanderActivity 使用 LocalStrings 提供国际化支持"
+    },
+    {
+      "from": "layer:navigation",
+      "to": "layer:ui-screens",
+      "reason": "CommanderHost 定义路由并加载各个 Screen 组件"
+    },
+    {
+      "from": "layer:ui-screens",
+      "to": "layer:ui-locale",
+      "reason": "TerminalScreen 使用 LocalStrings 获取本地化字符串"
+    },
+    {
+      "from": "layer:manifest",
+      "to": "layer:application",
+      "reason": "AndroidManifest.xml 声明 CommanderActivity 和 CommanderApplication"
+    },
+    {
+      "from": "layer:build-config",
+      "to": "layer:application",
+      "reason": "Gradle 构建脚本编译所有代码层"
+    },
+    {
+      "from": "layer:build-config",
+      "to": "layer:resources",
+      "reason": "Gradle 构建系统打包资源文件到 APK"
+    }
+  ],
+  "architecturalNotes": {
+    "summary": "Commander 采用了现代化的 Android 单 Activity 架构，使用 Jetpack Compose 构建声明式 UI。应用分为清晰的职责层：应用入口层负责初始化，导航层管理页面流转，UI 层实现具体界面，主题和国际化层提供视觉和文本支持，构建配置层和资源层支撑底层基础设施。",
+    "patterns": [
+      {
+        "name": "单 Activity 架构",
+        "description": "整个应用只有一个 Activity（CommanderActivity），所有页面都是 Composable 函数，通过 Navigation Compose 管理。这是 Jetpack Compose 推荐的架构模式，相比传统的多 Activity 或 Fragment 架构更简洁、性能更好。"
+      },
+      {
+        "name": "状态提升（State Hoisting）",
+        "description": "CommanderActivity 管理顶层状态（语言、主题），并通过回调函数传递给子组件。子组件（如 CommanderHost）不直接修改状态，而是通过回调通知父组件。这是 Compose 的核心设计原则，使组件更可测试和复用。"
+      },
+      {
+        "name": "CompositionLocal 依赖注入",
+        "description": "使用 CompositionLocal 机制传递全局依赖（如 LocalStrings），避免在组件树中层层传递参数。这类似于 React 的 Context API。"
+      },
+      {
+        "name": "声明式 UI",
+        "description": "所有 UI 都用 Composable 函数描述，UI 随状态自动更新。这与传统的命令式 UI（findViewById、setText）完全不同，代码更简洁、bug 更少。"
+      },
+      {
+        "name": "Material Design 3",
+        "description": "应用遵循 Material Design 3 设计规范，使用 Material3 组件库（Scaffold、TopAppBar、FloatingActionButton 等），并支持动态配色和明暗主题。"
+      }
+    ],
+    "keyInsights": [
+      "这是一个从旧版 iApp（基于 XML 布局和 Fragment）迁移到现代 Kotlin + Compose 架构的重构项目，当前处于基础框架搭建阶段",
+      "核心功能是终端模拟器，但终端逻辑层（如进程管理、命令执行、输出渲染）尚未实现，当前只有 UI 框架",
+      "项目使用 Trellis 工作流管理开发，说明这是一个结构化的长期项目，重视代码质量和规范",
+      "国际化层已经实现，说明应用计划支持多语言用户",
+      "TerminalScreen 实现了多标签管理、工具栏模式切换等高级 UI 交互，但占位逻辑较多，需要后续填充实际功能",
+      "导航动画使用了自定义的 Material Design 缓动曲线，注重用户体验细节"
+    ],
+    "missingLayers": [
+      {
+        "name": "业务逻辑层（ViewModel/UseCase）",
+        "reason": "当前应用只有 UI 层，缺少 ViewModel 来管理状态和业务逻辑。根据 MVVM 架构，应该引入 ViewModel 层来分离关注点"
+      },
+      {
+        "name": "数据层（Repository/DataSource）",
+        "reason": "终端应用需要管理会话数据、命令历史、配置存储等，应该有独立的数据层"
+      },
+      {
+        "name": "终端核心层（Terminal Engine）",
+        "reason": "最重要的缺失层：终端仿真引擎、进程管理、Shell 交互、输出解析等核心逻辑尚未实现"
+      },
+      {
+        "name": "服务层（Background Service）",
+        "reason": "终端会话需要在后台运行，应该有 Service 层来管理长期运行的终端进程"
+      }
+    ]
+  },
+  "framework": "Jetpack Compose + Material Design 3 + Navigation Compose",
+  "language": "Kotlin",
+  "projectType": "Android 应用（终端模拟器）"
+}

@@ -1,0 +1,14 @@
+{
+  "projectRoot": "/home/longbin/Zhian/Commander",
+  "sourceFilePaths": [
+    "app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+    "app/src/main/java/org/zhian/commander/CommanderApplication.kt",
+    "app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+    "app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt",
+    "app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt",
+    "app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt",
+    "app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt",
+    "app/src/main/java/org/zhian/commander/ui/theme/Theme.kt"
+  ],
+  "gitCommitHash": "4e659f8622647384d76ca78bd1757488a881622b"
+}

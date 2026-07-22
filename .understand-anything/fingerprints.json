@@ -1,0 +1,982 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "4e659f8622647384d76ca78bd1757488a881622b",
+  "generatedAt": "2026-07-22T09:57:49.071Z",
+  "files": {
+    "app/src/main/java/org/zhian/commander/CommanderActivity.kt": {
+      "filePath": "app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+      "contentHash": "26b1878010bf801270b3397ecc94cb7607b4a5b55923f9f6f85a2ebab57a6be7",
+      "functions": [
+        {
+          "name": "onCreate",
+          "params": [
+            "savedInstanceState"
+          ],
+          "exported": true,
+          "lineCount": 34
+        }
+      ],
+      "classes": [
+        {
+          "name": "CommanderActivity",
+          "methods": [
+            "onCreate"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 37
+        }
+      ],
+      "imports": [
+        {
+          "source": "android.graphics.Color",
+          "specifiers": [
+            "Color"
+          ]
+        },
+        {
+          "source": "android.os.Bundle",
+          "specifiers": [
+            "Bundle"
+          ]
+        },
+        {
+          "source": "androidx.activity.ComponentActivity",
+          "specifiers": [
+            "ComponentActivity"
+          ]
+        },
+        {
+          "source": "androidx.activity.SystemBarStyle",
+          "specifiers": [
+            "SystemBarStyle"
+          ]
+        },
+        {
+          "source": "androidx.activity.compose.setContent",
+          "specifiers": [
+            "setContent"
+          ]
+        },
+        {
+          "source": "androidx.activity.enableEdgeToEdge",
+          "specifiers": [
+            "enableEdgeToEdge"
+          ]
+        },
+        {
+          "source": "androidx.compose.foundation.isSystemInDarkTheme",
+          "specifiers": [
+            "isSystemInDarkTheme"
+          ]
+        },
+        {
+          "source": "androidx.compose.foundation.layout.fillMaxSize",
+          "specifiers": [
+            "fillMaxSize"
+          ]
+        },
+        {
+          "source": "androidx.compose.material3.Surface",
+          "specifiers": [
+            "Surface"
+          ]
+        },
+        {
+          "source": "androidx.compose.runtime.CompositionLocalProvider",
+          "specifiers": [
+            "CompositionLocalProvider"
+          ]
+        },
+        {
+          "source": "androidx.compose.runtime.getValue",
+          "specifiers": [
+            "getValue"
+          ]
+        },
+        {
+          "source": "androidx.compose.runtime.mutableStateOf",
+          "specifiers": [
+            "mutableStateOf"
+          ]
+        },
+        {
+          "source": "androidx.compose.runtime.remember",
+          "specifiers": [
+            "remember"
+          ]
+        },
+        {
+          "source": "androidx.compose.runtime.setValue",
+          "specifiers": [
+            "setValue"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.Modifier",
+          "specifiers": [
+            "Modifier"
+          ]
+        },
+        {
+          "source": "org.zhian.commander.navigation.CommanderHost",
+          "specifiers": [
+            "CommanderHost"
+          ]
+        },
+        {
+          "source": "org.zhian.commander.ui.locale.LocalStrings",
+          "specifiers": [
+            "LocalStrings"
+          ]
+        },
+        {
+          "source": "org.zhian.commander.ui.locale.stringsFor",
+          "specifiers": [
+            "stringsFor"
+          ]
+        },
+        {
+          "source": "org.zhian.commander.ui.theme.CommanderTheme",
+          "specifiers": [
+            "CommanderTheme"
+          ]
+        },
+        {
+          "source": "org.zhian.commander.ui.theme.ThemeMode",
+          "specifiers": [
+            "ThemeMode"
+          ]
+        },
+        {
+          "source": "java.util.Locale",
+          "specifiers": [
+            "Locale"
+          ]
+        }
+      ],
+      "exports": [
+        "onCreate",
+        "CommanderActivity"
+      ],
+      "totalLines": 62,
+      "hasStructuralAnalysis": true
+    },
+    "app/src/main/java/org/zhian/commander/CommanderApplication.kt": {
+      "filePath": "app/src/main/java/org/zhian/commander/CommanderApplication.kt",
+      "contentHash": "d1cfeb075b3e9dc9df2cc50306dc52e3f363d9362fb1fb148be1cda3dd69cdee",
+      "functions": [
+        {
+          "name": "onCreate",
+          "params": [],
+          "exported": true,
+          "lineCount": 4
+        }
+      ],
+      "classes": [
+        {
+          "name": "CommanderApplication",
+          "methods": [
+            "onCreate"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "imports": [
+        {
+          "source": "android.app.Application",
+          "specifiers": [
+            "Application"
+          ]
+        }
+      ],
+      "exports": [
+        "onCreate",
+        "CommanderApplication"
+      ],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt": {
+      "filePath": "app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+      "contentHash": "c875742b571e93cf94a5a7e22ae1d95e43c0b7a7ff0093a6b7de518750e141e4",
+      "functions": [
+        {
+          "name": "openEnter",
+          "params": [],
+          "returnType": "EnterTransition",
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "openExit",
+          "params": [],
+          "returnType": "ExitTransition",
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "closeEnter",
+          "params": [],
+          "returnType": "EnterTransition",
+          "exported": false,
+          "lineCount": 6
+        },
+        {
+          "name": "closeExit",
+          "params": [],
+          "returnType": "ExitTransition",
+          "exported": false,
+          "lineCount": 13
+        },
+        {
+          "name": "CommanderHost",
+          "params": [
+            "selectedLocale",
+            "onLocaleSelected",
+            "isDarkTheme",
+            "onDarkThemeChange",
+            "modifier"
+          ],
+          "exported": true,
+          "lineCount": 70
+        }
+      ],
+      "classes": [
+        {
+          "name": "CommanderRouting",
+          "methods": [],
+          "properties": [
+            "Splash",
+            "Terminal",
+            "Settings"
+          ],
+          "exported": false,
+          "lineCount": 5
+        },
+        {
+          "name": "TerminalGlobalMotionSpec",
+          "methods": [],
+          "properties": [
+            "linearInterpolator",
+            "fastOutSlowInInterpolator",
+            "fastOutExtraSlowInInterpolator",
+            "LinearAlpha",
+            "FastOutSlowIn",
+            "FastOutExtraSlowIn"
+          ],
+          "exported": false,
+          "lineCount": 21
+        }
+      ],
+      "imports": [
+        {
+          "source": "android.view.animation.LinearInterpolator",
+          "specifiers": [
+            "LinearInterpolator"
+          ]
+        },
+        {
+          "source": "android.view.animation.PathInterpolator",
+          "specifiers": [
+            "PathInterpolator"
+          ]
+        },
+        {
+          "source": "androidx.compose.animation.AnimatedContentTransitionScope",
+          "specifiers": [
+            "AnimatedContentTransitionScope"
+          ]
+        },
+        {
+          "source": "androidx.compose.animation.EnterTransition",
+          "specifiers": [
+            "EnterTransition"
+          ]
+        },
+        {
+          "source": "androidx.compose.animation.ExitTransition",
+          "specifiers": [
+            "ExitTransition"
+          ]
+        },
+        {
+          "source": "androidx.compose.animation.core.Easing",
+          "specifiers": [
+            "Easing"
+          ]
+        },
+        {
+          "source": "androidx.compose.animation.core.CubicBezierEasing",
+          "specifiers": [
+            "CubicBezierEasing"
+          ]
+        },
+        {
+          "source": "androidx.compose.animation.core.tween",
+          "specifiers": [
+            "tween"
+          ]
+        },
+        {
+          "source": "androidx.compose.animation.fadeIn",
+          "specifiers": [
+            "fadeIn"
+          ]
+        },
+        {
+          "source": "androidx.compose.animation.fadeOut",
+          "specifiers": [
+            "fadeOut"
+          ]
+        },
+        {
+          "source": "androidx.compose.animation.slideInHorizontally",
+          "specifiers": [
+            "slideInHorizontally"
+          ]
+        },
+        {
+          "source": "androidx.compose.animation.slideOutHorizontally",
+          "specifiers": [
+            "slideOutHorizontally"
+          ]
+        },
+        {
+          "source": "androidx.compose.runtime.Composable",
+          "specifiers": [
+            "Composable"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.Modifier",
+          "specifiers": [
+            "Modifier"
+          ]
+        },
+        {
+          "source": "androidx.core.graphics.PathParser",
+          "specifiers": [
+            "PathParser"
+          ]
+        },
+        {
+          "source": "androidx.navigation.NavBackStackEntry",
+          "specifiers": [
+            "NavBackStackEntry"
+          ]
+        },
+        {
+          "source": "androidx.navigation.compose.NavHost",
+          "specifiers": [
+            "NavHost"
+          ]
+        },
+        {
+          "source": "androidx.navigation.compose.composable",
+          "specifiers": [
+            "composable"
+          ]
+        },
+        {
+          "source": "androidx.navigation.compose.rememberNavController",
+          "specifiers": [
+            "rememberNavController"
+          ]
+        },
+        {
+          "source": "org.zhian.commander.ui.splash.SplashScreen",
+          "specifiers": [
+            "SplashScreen"
+          ]
+        },
+        {
+          "source": "org.zhian.commander.ui.terminal.TerminalScreen",
+          "specifiers": [
+            "TerminalScreen"
+          ]
+        },
+        {
+          "source": "org.zhian.commander.ui.settings.SettingsScreen",
+          "specifiers": [
+            "SettingsScreen"
+          ]
+        },
+        {
+          "source": "java.util.Locale",
+          "specifiers": [
+            "Locale"
+          ]
+        },
+        {
+          "source": "kotlin.math.roundToInt",
+          "specifiers": [
+            "roundToInt"
+          ]
+        }
+      ],
+      "exports": [
+        "Splash",
+        "Terminal",
+        "Settings",
+        "LinearAlpha",
+        "FastOutSlowIn",
+        "FastOutExtraSlowIn",
+        "CommanderHost"
+      ],
+      "totalLines": 171,
+      "hasStructuralAnalysis": true
+    },
+    "app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt": {
+      "filePath": "app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt",
+      "contentHash": "e516c064612bd1b72250fc0fc2571b57ee18442351bf25dcf8b9ad35fa50ac27",
+      "functions": [
+        {
+          "name": "stringsFor",
+          "params": [
+            "locale"
+          ],
+          "returnType": "Strings",
+          "exported": true,
+          "lineCount": 10
+        }
+      ],
+      "classes": [
+        {
+          "name": "Strings",
+          "methods": [],
+          "properties": [
+            "appName",
+            "settings",
+            "newSession",
+            "restartSession"
+          ],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "imports": [
+        {
+          "source": "androidx.compose.runtime.staticCompositionLocalOf",
+          "specifiers": [
+            "staticCompositionLocalOf"
+          ]
+        },
+        {
+          "source": "java.util.Locale",
+          "specifiers": [
+            "Locale"
+          ]
+        }
+      ],
+      "exports": [
+        "Strings",
+        "stringsFor"
+      ],
+      "totalLines": 47,
+      "hasStructuralAnalysis": true
+    },
+    "app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt": {
+      "filePath": "app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt",
+      "contentHash": "7a0ad01669d0cbdc04476af95283d48c7adb681d713592a7beb81dde935b5b62",
+      "functions": [
+        {
+          "name": "SettingsScreen",
+          "params": [
+            "onNavigateBack"
+          ],
+          "exported": true,
+          "lineCount": 31
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "androidx.compose.foundation.layout.Box",
+          "specifiers": [
+            "Box"
+          ]
+        },
+        {
+          "source": "androidx.compose.foundation.layout.fillMaxSize",
+          "specifiers": [
+            "fillMaxSize"
+          ]
+        },
+        {
+          "source": "androidx.compose.foundation.layout.padding",
+          "specifiers": [
+            "padding"
+          ]
+        },
+        {
+          "source": "androidx.compose.material.icons.Icons",
+          "specifiers": [
+            "Icons"
+          ]
+        },
+        {
+          "source": "androidx.compose.material.icons.automirrored.filled.ArrowBack",
+          "specifiers": [
+            "ArrowBack"
+          ]
+        },
+        {
+          "source": "androidx.compose.material3.ExperimentalMaterial3Api",
+          "specifiers": [
+            "ExperimentalMaterial3Api"
+          ]
+        },
+        {
+          "source": "androidx.compose.material3.Icon",
+          "specifiers": [
+            "Icon"
+          ]
+        },
+        {
+          "source": "androidx.compose.material3.IconButton",
+          "specifiers": [
+            "IconButton"
+          ]
+        },
+        {
+          "source": "androidx.compose.material3.Scaffold",
+          "specifiers": [
+            "Scaffold"
+          ]
+        },
+        {
+          "source": "androidx.compose.material3.Text",
+          "specifiers": [
+            "Text"
+          ]
+        },
+        {
+          "source": "androidx.compose.material3.TopAppBar",
+          "specifiers": [
+            "TopAppBar"
+          ]
+        },
+        {
+          "source": "androidx.compose.runtime.Composable",
+          "specifiers": [
+            "Composable"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.Modifier",
+          "specifiers": [
+            "Modifier"
+          ]
+        },
+        {
+          "source": "org.zhian.commander.ui.locale.LocalStrings",
+          "specifiers": [
+            "LocalStrings"
+          ]
+        }
+      ],
+      "exports": [
+        "SettingsScreen"
+      ],
+      "totalLines": 49,
+      "hasStructuralAnalysis": true
+    },
+    "app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt": {
+      "filePath": "app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt",
+      "contentHash": "ac76ee93dd36437ffab24aa7e33a4aa0c4efd93a24593d71761c8d558661cedb",
+      "functions": [
+        {
+          "name": "SplashScreen",
+          "params": [
+            "onNavigateToTerminal"
+          ],
+          "exported": true,
+          "lineCount": 54
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "androidx.compose.animation.core.Animatable",
+          "specifiers": [
+            "Animatable"
+          ]
+        },
+        {
+          "source": "androidx.compose.animation.core.tween",
+          "specifiers": [
+            "tween"
+          ]
+        },
+        {
+          "source": "androidx.compose.foundation.Canvas",
+          "specifiers": [
+            "Canvas"
+          ]
+        },
+        {
+          "source": "androidx.compose.foundation.layout.Box",
+          "specifiers": [
+            "Box"
+          ]
+        },
+        {
+          "source": "androidx.compose.foundation.layout.fillMaxSize",
+          "specifiers": [
+            "fillMaxSize"
+          ]
+        },
+        {
+          "source": "androidx.compose.foundation.layout.size",
+          "specifiers": [
+            "size"
+          ]
+        },
+        {
+          "source": "androidx.compose.material3.MaterialTheme",
+          "specifiers": [
+            "MaterialTheme"
+          ]
+        },
+        {
+          "source": "androidx.compose.runtime.Composable",
+          "specifiers": [
+            "Composable"
+          ]
+        },
+        {
+          "source": "androidx.compose.runtime.LaunchedEffect",
+          "specifiers": [
+            "LaunchedEffect"
+          ]
+        },
+        {
+          "source": "androidx.compose.runtime.remember",
+          "specifiers": [
+            "remember"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.Alignment",
+          "specifiers": [
+            "Alignment"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.Modifier",
+          "specifiers": [
+            "Modifier"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.geometry.Offset",
+          "specifiers": [
+            "Offset"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.graphics.Path",
+          "specifiers": [
+            "Path"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.graphics.StrokeCap",
+          "specifiers": [
+            "StrokeCap"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.graphics.StrokeJoin",
+          "specifiers": [
+            "StrokeJoin"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.graphics.drawscope.Stroke",
+          "specifiers": [
+            "Stroke"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.unit.dp",
+          "specifiers": [
+            "dp"
+          ]
+        },
+        {
+          "source": "org.zhian.commander.navigation.NiriCloseEasing",
+          "specifiers": [
+            "NiriCloseEasing"
+          ]
+        },
+        {
+          "source": "org.zhian.commander.navigation.NiriCloseDurationMillis",
+          "specifiers": [
+            "NiriCloseDurationMillis"
+          ]
+        }
+      ],
+      "exports": [
+        "SplashScreen"
+      ],
+      "totalLines": 78,
+      "hasStructuralAnalysis": true
+    },
+    "app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt": {
+      "filePath": "app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt",
+      "contentHash": "4f61ad6a726161d43c5a80dfddce3f233d4a5174686c8522fc4df2850130af82",
+      "functions": [
+        {
+          "name": "TerminalScreen",
+          "params": [
+            "onNavigateToSettings"
+          ],
+          "exported": true,
+          "lineCount": 287
+        },
+        {
+          "name": "ModifierButton",
+          "params": [
+            "text"
+          ],
+          "exported": false,
+          "lineCount": 9
+        }
+      ],
+      "classes": [
+        {
+          "name": "ToolbarMode",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "TabState",
+          "methods": [],
+          "properties": [
+            "id",
+            "title",
+            "isActive",
+            "exitCode"
+          ],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "imports": [
+        {
+          "source": "androidx.compose.animation.AnimatedVisibility",
+          "specifiers": [
+            "AnimatedVisibility"
+          ]
+        },
+        {
+          "source": "androidx.compose.animation.core.animateFloatAsState",
+          "specifiers": [
+            "animateFloatAsState"
+          ]
+        },
+        {
+          "source": "androidx.compose.animation.slideInVertically",
+          "specifiers": [
+            "slideInVertically"
+          ]
+        },
+        {
+          "source": "androidx.compose.animation.slideOutVertically",
+          "specifiers": [
+            "slideOutVertically"
+          ]
+        },
+        {
+          "source": "androidx.compose.foundation.background",
+          "specifiers": [
+            "background"
+          ]
+        },
+        {
+          "source": "androidx.compose.foundation.gestures.detectTapGestures",
+          "specifiers": [
+            "detectTapGestures"
+          ]
+        },
+        {
+          "source": "androidx.compose.foundation.layout",
+          "specifiers": [
+            "*"
+          ]
+        },
+        {
+          "source": "androidx.compose.foundation.lazy.LazyColumn",
+          "specifiers": [
+            "LazyColumn"
+          ]
+        },
+        {
+          "source": "androidx.compose.foundation.lazy.rememberLazyListState",
+          "specifiers": [
+            "rememberLazyListState"
+          ]
+        },
+        {
+          "source": "androidx.compose.material.icons.Icons",
+          "specifiers": [
+            "Icons"
+          ]
+        },
+        {
+          "source": "androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft",
+          "specifiers": [
+            "KeyboardArrowLeft"
+          ]
+        },
+        {
+          "source": "androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight",
+          "specifiers": [
+            "KeyboardArrowRight"
+          ]
+        },
+        {
+          "source": "androidx.compose.material.icons.filled",
+          "specifiers": [
+            "*"
+          ]
+        },
+        {
+          "source": "androidx.compose.material3",
+          "specifiers": [
+            "*"
+          ]
+        },
+        {
+          "source": "androidx.compose.runtime",
+          "specifiers": [
+            "*"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.Alignment",
+          "specifiers": [
+            "Alignment"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.Modifier",
+          "specifiers": [
+            "Modifier"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.draw.rotate",
+          "specifiers": [
+            "rotate"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.graphics.vector.ImageVector",
+          "specifiers": [
+            "ImageVector"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.input.pointer.pointerInput",
+          "specifiers": [
+            "pointerInput"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.platform.LocalFocusManager",
+          "specifiers": [
+            "LocalFocusManager"
+          ]
+        },
+        {
+          "source": "androidx.compose.ui.unit.dp",
+          "specifiers": [
+            "dp"
+          ]
+        },
+        {
+          "source": "org.zhian.commander.ui.locale.LocalStrings",
+          "specifiers": [
+            "LocalStrings"
+          ]
+        }
+      ],
+      "exports": [
+        "ToolbarMode",
+        "TabState",
+        "TerminalScreen"
+      ],
+      "totalLines": 335,
+      "hasStructuralAnalysis": true
+    },
+    "app/src/main/java/org/zhian/commander/ui/theme/Theme.kt": {
+      "filePath": "app/src/main/java/org/zhian/commander/ui/theme/Theme.kt",
+      "contentHash": "c656fdb07de8c516b49473f67c04695aa1ed2e6751c1fc76efd424e78537e3d6",
+      "functions": [
+        {
+          "name": "CommanderTheme",
+          "params": [
+            "darkTheme",
+            "content"
+          ],
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [
+        {
+          "name": "ThemeMode",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "imports": [
+        {
+          "source": "androidx.compose.foundation.isSystemInDarkTheme",
+          "specifiers": [
+            "isSystemInDarkTheme"
+          ]
+        },
+        {
+          "source": "androidx.compose.material3.MaterialTheme",
+          "specifiers": [
+            "MaterialTheme"
+          ]
+        },
+        {
+          "source": "androidx.compose.material3.darkColorScheme",
+          "specifiers": [
+            "darkColorScheme"
+          ]
+        },
+        {
+          "source": "androidx.compose.material3.lightColorScheme",
+          "specifiers": [
+            "lightColorScheme"
+          ]
+        },
+        {
+          "source": "androidx.compose.runtime.Composable",
+          "specifiers": [
+            "Composable"
+          ]
+        }
+      ],
+      "exports": [
+        "ThemeMode",
+        "CommanderTheme"
+      ],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    }
+  }
+}

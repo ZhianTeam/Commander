@@ -1,0 +1,898 @@
+{
+  "version": "1.0.0",
+  "project": {
+    "name": "Commander",
+    "languages": [
+      "Kotlin",
+      "Python"
+    ],
+    "frameworks": [
+      "Jetpack Compose",
+      "Material Design 3",
+      "Navigation Compose",
+      "Android Lifecycle",
+      "Trellis"
+    ],
+    "description": "一个 Android 终端应用，让你像聊天一样运行 shell 命令。从 iApp 迁移至 Kotlin + Jetpack Compose 的完全重构版本。",
+    "analyzedAt": "2026-07-22T09:57:18Z",
+    "gitCommitHash": "4e659f8622647384d76ca78bd1757488a881622b"
+  },
+  "nodes": [
+    {
+      "id": "file:app/build.gradle.kts",
+      "label": "app/build.gradle.kts",
+      "tags": [
+        "构建配置",
+        "Gradle",
+        "Android",
+        "依赖管理"
+      ],
+      "summary": "Android 应用模块的 Gradle 构建配置文件，定义了编译选项、依赖项和构建类型。",
+      "description": "该文件配置了 Commander Android 应用的构建参数，包括编译 SDK 版本（37）、最低 SDK 版本（28）、Kotlin JVM 目标（21）、Jetpack Compose 依赖（Material 3、Navigation Compose 2.9.8）以及核心 Android 库。启用了 Compose 功能并配置了资源打包规则。",
+      "tier": "infra",
+      "complexity": "moderate",
+      "type": "file",
+      "name": "app/build.gradle.kts"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+      "label": "CommanderActivity.kt",
+      "tags": [
+        "Activity",
+        "UI入口",
+        "Compose",
+        "主题管理",
+        "本地化"
+      ],
+      "summary": "应用的主 Activity，设置 edge-to-edge 显示、主题和本地化环境。",
+      "description": "CommanderActivity 是应用的入口点，继承自 ComponentActivity。它配置了透明的系统栏样式，管理应用主题模式（明暗/跟随系统），提供本地化字符串（通过 CompositionLocalProvider），并托管 CommanderHost 导航容器。使用 mutableStateOf 管理 locale 和主题状态。",
+      "tier": "ui",
+      "exports": [
+        "CommanderActivity"
+      ],
+      "complexity": "moderate",
+      "type": "file",
+      "name": "CommanderActivity.kt"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/CommanderApplication.kt",
+      "label": "CommanderApplication.kt",
+      "tags": [
+        "Application",
+        "应用初始化"
+      ],
+      "summary": "应用的 Application 类，用于全局初始化。",
+      "description": "CommanderApplication 继承自 Android Application 类，提供应用级别的初始化入口点。当前实现仅包含空的 onCreate 方法，预留用于未来的全局配置（如日志、崩溃报告、依赖注入等）。",
+      "tier": "core",
+      "exports": [
+        "CommanderApplication"
+      ],
+      "complexity": "moderate",
+      "type": "file",
+      "name": "CommanderApplication.kt"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+      "label": "CommanderHost.kt",
+      "tags": [
+        "导航",
+        "NavHost",
+        "动画",
+        "路由管理"
+      ],
+      "summary": "应用的导航宿主，定义路由和页面转场动画。",
+      "description": "CommanderHost 是基于 Jetpack Navigation Compose 的导航容器，管理三个主要路由：Splash（启动画面）、Terminal（终端主界面）、Settings（设置页面）。实现了精细的转场动画，包括滑动和淡入淡出效果，使用自定义的 Easing 函数（FastOutExtraSlowIn、FastOutSlowIn）模拟 Android Material 动画曲线。定义了 NiriCloseEasing 和 NiriCloseDurationMillis 常量供其他组件使用。",
+      "tier": "ui",
+      "exports": [
+        "CommanderHost",
+        "NiriCloseDurationMillis",
+        "NiriCloseEasing"
+      ],
+      "complexity": "moderate",
+      "type": "file",
+      "name": "CommanderHost.kt"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt",
+      "label": "LocalStrings.kt",
+      "tags": [
+        "国际化",
+        "本地化",
+        "字符串资源",
+        "多语言"
+      ],
+      "summary": "多语言字符串资源定义和语言选择逻辑。",
+      "description": "该文件定义了应用的多语言支持，包含 Strings 数据类（存储 UI 字符串）和四种语言的翻译：英语、日语、简体中文、繁体中文。stringsFor 函数根据 Locale 返回对应语言的字符串集，支持通过 script 或 country 代码区分简繁中文。LocalStrings 是 CompositionLocal，供 Compose UI 树访问当前语言环境。",
+      "tier": "ui",
+      "exports": [
+        "Strings",
+        "stringsFor",
+        "LocalStrings"
+      ],
+      "complexity": "moderate",
+      "type": "file",
+      "name": "LocalStrings.kt"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt",
+      "label": "SettingsScreen.kt",
+      "tags": [
+        "设置页面",
+        "UI组件",
+        "Scaffold"
+      ],
+      "summary": "设置界面的 Composable 组件。",
+      "description": "SettingsScreen 是一个空的设置页面框架，使用 Material 3 的 Scaffold 布局。包含带返回按钮的 TopAppBar（使用本地化字符串），主体内容区域当前为空，预留用于未来的设置选项（如主题切换、语言选择、终端配置等）。",
+      "tier": "ui",
+      "exports": [
+        "SettingsScreen"
+      ],
+      "complexity": "moderate",
+      "type": "file",
+      "name": "SettingsScreen.kt"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt",
+      "label": "SplashScreen.kt",
+      "tags": [
+        "启动画面",
+        "动画",
+        "Canvas绘图"
+      ],
+      "summary": "应用启动画面，显示自定义矢量图标并执行淡出动画。",
+      "description": "SplashScreen 使用 Compose Canvas 绘制自定义的 \"<>\" 符号作为应用图标。启动后等待 1 秒，然后执行淡出动画（使用 NiriCloseEasing 和 250ms 时长），动画完成后通过回调导航至终端界面。使用 Animatable 管理透明度状态，图标颜色跟随主题的 onBackground 颜色。",
+      "tier": "ui",
+      "exports": [
+        "SplashScreen"
+      ],
+      "complexity": "moderate",
+      "type": "file",
+      "name": "SplashScreen.kt"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt",
+      "label": "TerminalScreen.kt",
+      "tags": [
+        "终端界面",
+        "多标签",
+        "工具栏",
+        "命令输入"
+      ],
+      "summary": "终端主界面，包含多标签管理、命令输入工具栏和导航按钮。",
+      "description": "TerminalScreen 是应用的核心界面，实现了终端仿真器的 UI 框架。功能包括：多标签会话管理（TabState）、可滚动的命令输出区域（LazyColumn）、三种工具栏模式（Normal 命令输入、Modifier 修饰键、Navigation 方向键）、浮动工具栏（滚动时自动隐藏/显示）、顶部菜单（新建/重启会话、设置）。当前输出为占位内容，实际终端逻辑待实现。",
+      "tier": "ui",
+      "exports": [
+        "TerminalScreen",
+        "ToolbarMode",
+        "TabState"
+      ],
+      "complexity": "moderate",
+      "type": "file",
+      "name": "TerminalScreen.kt"
+    },
+    {
+      "id": "file:app/src/main/java/org/zhian/commander/ui/theme/Theme.kt",
+      "label": "Theme.kt",
+      "tags": [
+        "主题",
+        "Material Design",
+        "配色方案"
+      ],
+      "summary": "应用的 Material 3 主题定义。",
+      "description": "Theme.kt 定义了 CommanderTheme Composable 函数，提供明暗两套配色方案（使用 Material 3 默认的 darkColorScheme 和 lightColorScheme）。ThemeMode 枚举定义了三种主题模式：Light、Dark、System（跟随系统）。主题通过 MaterialTheme 应用到整个 Compose 树。",
+      "tier": "ui",
+      "exports": [
+        "CommanderTheme",
+        "ThemeMode"
+      ],
+      "complexity": "moderate",
+      "type": "file",
+      "name": "Theme.kt"
+    },
+    {
+      "id": "file:build.gradle.kts",
+      "label": "build.gradle.kts",
+      "tags": [
+        "根构建配置",
+        "Gradle插件"
+      ],
+      "summary": "项目根目录的 Gradle 构建配置。",
+      "description": "根级别的 Gradle 构建文件，声明了应用于项目的插件版本：Android Gradle Plugin 9.2.1（apply false）和 Kotlin Compose Plugin 2.2.20（apply false）。这些插件在子模块中实际应用。",
+      "tier": "infra",
+      "complexity": "moderate",
+      "type": "file",
+      "name": "build.gradle.kts"
+    },
+    {
+      "id": "file:settings.gradle.kts",
+      "label": "settings.gradle.kts",
+      "tags": [
+        "Gradle设置",
+        "仓库配置",
+        "模块定义"
+      ],
+      "summary": "Gradle 项目设置文件，配置仓库和包含的模块。",
+      "description": "Gradle 设置文件定义了项目结构和依赖解析策略。配置了 Maven 仓库（Google、Maven Central、Gradle Plugin Portal），启用了 foojay-resolver 插件用于自动下载 JDK，设置项目名称为 \"Commander\"，并包含了 \"app\" 模块。使用 FAIL_ON_PROJECT_REPOS 模式确保依赖来自中央仓库。",
+      "tier": "infra",
+      "complexity": "moderate",
+      "type": "file",
+      "name": "settings.gradle.kts"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+      "label": "托管导航",
+      "edgeType": "uses",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt",
+      "label": "提供本地化上下文",
+      "edgeType": "uses",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/ui/theme/Theme.kt",
+      "label": "应用主题",
+      "edgeType": "uses",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt",
+      "label": "启动画面路由",
+      "edgeType": "routes",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt",
+      "label": "终端界面路由",
+      "edgeType": "routes",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt",
+      "label": "设置页面路由",
+      "edgeType": "routes",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+      "label": "使用动画常量",
+      "edgeType": "uses",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt",
+      "label": "读取本地化字符串",
+      "edgeType": "uses",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt",
+      "target": "file:app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt",
+      "label": "读取本地化字符串",
+      "edgeType": "uses",
+      "direction": "forward",
+      "type": "imports"
+    },
+    {
+      "source": "file:settings.gradle.kts",
+      "target": "file:app/build.gradle.kts",
+      "label": "包含应用模块",
+      "edgeType": "includes",
+      "direction": "forward",
+      "type": "imports"
+    }
+  ],
+  "layers": [
+    {
+      "id": "layer:application",
+      "name": "应用入口层",
+      "description": "Android 应用的入口点和全局配置，负责应用生命周期管理、Activity 初始化和全局状态设置",
+      "color": "#FF6B6B",
+      "languageNotes": "这一层是 Android 应用的最外层，包含 Activity 和 Application 类。CommanderActivity 负责设置 edge-to-edge 显示、主题模式、本地化环境，并初始化 Compose UI。这是用户看到的第一个入口点。",
+      "languageLesson": "Application 层是 Android 应用架构的顶层，所有的应用级配置（如主题、语言、全局状态）都在这里初始化。Activity 是 UI 的宿主容器，负责将业务逻辑和视图层连接起来。",
+      "nodeIds": [
+        "file:app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+        "file:app/src/main/java/org/zhian/commander/CommanderApplication.kt"
+      ]
+    },
+    {
+      "id": "layer:navigation",
+      "name": "导航路由层",
+      "description": "管理应用内的页面导航、路由定义和转场动画，使用 Jetpack Navigation Compose 实现声明式导航",
+      "color": "#4ECDC4",
+      "languageNotes": "导航层定义了应用的三个主要路由：启动画面（Splash）、终端界面（Terminal）和设置界面（Settings）。它实现了自定义的转场动画（基于 Material Design 的 FastOutExtraSlowIn 缓动曲线），提供流畅的页面切换体验。CommanderHost 是导航的中心节点，接收状态参数（如语言、主题）并传递给各个页面。",
+      "languageLesson": "Navigation 层是单 Activity 多屏幕架构的核心。在 Jetpack Compose 中，NavHost 充当容器，composable() 定义路由。这种声明式导航方式比传统的 Fragment 事务更简洁，且支持类型安全的参数传递。",
+      "nodeIds": [
+        "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt"
+      ]
+    },
+    {
+      "id": "layer:ui-screens",
+      "name": "界面页面层",
+      "description": "各个功能页面的 Composable 实现，包括启动画面、终端主界面和设置界面，负责具体的 UI 布局和用户交互",
+      "color": "#95E1D3",
+      "languageNotes": "Screen 层是用户直接交互的界面。TerminalScreen 是应用的核心页面，实现了多标签终端管理、命令输入工具栏、修饰键面板和导航键面板。它使用了 Scaffold 布局、TopAppBar、LazyColumn（虚拟滚动列表）和 FloatingActionButton。SplashScreen 负责启动过渡，SettingsScreen 提供配置选项。每个 Screen 都是独立的 Composable 函数，通过回调函数（如 onNavigateToSettings）与导航层通信。",
+      "languageLesson": "Screen 组件是 UI 的顶层容器，通常对应一个完整的页面。在 Jetpack Compose 中，Screen 应该是无状态的（stateless）或提升状态（state hoisting），将状态管理交给 ViewModel 或上层组件。这样可以提高可测试性和复用性。",
+      "nodeIds": [
+        "file:app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt",
+        "file:app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt",
+        "file:app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt"
+      ]
+    },
+    {
+      "id": "layer:ui-theme",
+      "name": "主题样式层",
+      "description": "Material Design 3 主题定义，包括配色方案、形状、排版和明暗模式支持",
+      "color": "#F38181",
+      "languageNotes": "主题层定义了应用的视觉风格。CommanderTheme 提供了 Material Design 3 的配色方案（lightColorScheme 和 darkColorScheme），支持系统主题切换。这一层通过 MaterialTheme 包裹整个应用，使得所有 UI 组件都能访问统一的颜色、形状和排版设置。",
+      "languageLesson": "Theme 是 Compose UI 的设计系统基础。MaterialTheme 提供了 colorScheme、typography、shapes 等属性，组件可以通过 MaterialTheme.colorScheme.primary 等方式访问。明暗模式切换只需更换 colorScheme，所有组件自动响应。",
+      "nodeIds": [
+        "file:app/src/main/java/org/zhian/commander/ui/theme/Theme.kt"
+      ]
+    },
+    {
+      "id": "layer:ui-locale",
+      "name": "国际化层",
+      "description": "多语言字符串资源管理和语言切换逻辑，支持中文和英文界面",
+      "color": "#AA96DA",
+      "languageNotes": "国际化层定义了应用的所有文本字符串，使用 Compose 的 CompositionLocal 机制。LocalStrings 提供了当前语言的字符串对象，stringsFor() 函数根据 Locale 返回对应语言的字符串集合。这种方式比 Android 传统的 strings.xml 更类型安全，且支持动态语言切换而无需重启 Activity。",
+      "languageLesson": "CompositionLocal 是 Compose 中的依赖注入机制，可以在组件树中隐式传递数据（如主题、字符串、配置）。通过 CompositionLocalProvider 设置值，子组件通过 LocalXxx.current 访问。这避免了层层传递参数的麻烦。",
+      "nodeIds": [
+        "file:app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt"
+      ]
+    },
+    {
+      "id": "layer:build-config",
+      "name": "构建配置层",
+      "description": "Gradle 构建脚本和项目配置，定义依赖项、编译选项和构建变体",
+      "color": "#FCBAD3",
+      "languageNotes": "构建层使用 Kotlin DSL 编写 Gradle 脚本。app/build.gradle.kts 定义了应用模块的配置（如 compileSdk、minSdk、依赖项），build.gradle.kts 定义了项目级插件，settings.gradle.kts 定义了仓库和模块结构。这一层是代码能够编译和运行的基础。",
+      "languageLesson": "Gradle 是 Android 项目的构建系统。Kotlin DSL（.gradle.kts）比 Groovy DSL 更类型安全，有更好的 IDE 支持。依赖管理使用版本目录（libs.versions.toml）可以统一管理多模块项目的依赖版本。",
+      "nodeIds": [
+        "file:app/build.gradle.kts",
+        "file:build.gradle.kts",
+        "file:settings.gradle.kts"
+      ]
+    },
+    {
+      "id": "layer:resources",
+      "name": "资源文件层",
+      "description": "Android 资源文件，包括应用图标、字符串、主题 XML 和配置文件",
+      "color": "#FFFFD2",
+      "languageNotes": "资源层包含了所有非代码资源。虽然应用使用 Compose 作为主要 UI 框架，但仍需要传统的 Android 资源文件：应用图标（mipmap）、启动器图标（drawable）、主题定义（themes.xml）、默认字符串（strings.xml）和文件路径配置（file_paths.xml）。图标文件根据不同屏幕密度（mdpi、hdpi、xhdpi 等）提供多个版本，确保在各种设备上都有清晰的显示效果。",
+      "languageLesson": "Android 资源系统支持多密度图片、多语言字符串、不同屏幕尺寸的布局等。即使使用 Compose，资源文件仍然是必需的（如 AndroidManifest.xml、应用图标）。mipmap 用于启动器图标，drawable 用于普通图片。anydpi-v26 表示自适应图标（Adaptive Icon），支持不同形状的启动器。",
+      "nodeIds": [
+        "file:app/src/main/res/values/strings.xml",
+        "file:app/src/main/res/values/themes.xml",
+        "file:app/src/main/res/xml/file_paths.xml",
+        "file:app/src/main/res/drawable/ic_launcher_foreground.xml",
+        "file:app/src/main/res/drawable/ic_launcher_monochrome.xml",
+        "file:app/src/main/res/mipmap-mdpi/i.png",
+        "file:app/src/main/res/mipmap-hdpi/i.png",
+        "file:app/src/main/res/mipmap-xhdpi/i.png",
+        "file:app/src/main/res/mipmap-xxhdpi/i.png",
+        "file:app/src/main/res/mipmap-xxxhdpi/i.png",
+        "file:app/src/main/res/mipmap-anydpi-v26/i.xml",
+        "file:app/src/main/res/mipmap-anydpi-v26/i_round.xml"
+      ]
+    },
+    {
+      "id": "layer:manifest",
+      "name": "清单配置层",
+      "description": "AndroidManifest.xml 和应用级元数据配置，声明权限、组件和应用属性",
+      "color": "#A8D8EA",
+      "languageNotes": "AndroidManifest.xml 是 Android 应用的核心配置文件，声明了应用的包名、Application 类、Activity、权限需求、意图过滤器等。这是 Android 系统识别和启动应用的入口。",
+      "languageLesson": "Manifest 是应用的身份证，定义了应用的所有组件（Activity、Service、BroadcastReceiver、ContentProvider）。任何在代码中定义的组件必须在 Manifest 中声明才能被系统识别。权限声明（uses-permission）也必须在这里定义。",
+      "nodeIds": [
+        "file:app/src/main/AndroidManifest.xml"
+      ]
+    }
+  ],
+  "tour": {
+    "title": "Commander Android 终端应用架构导览",
+    "description": "从 iApp 迁移到 Kotlin + Jetpack Compose 的完全重构版本。这是一个让你像聊天一样运行 shell 命令的 Android 终端应用。",
+    "entryPoint": "file:app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+    "stops": [
+      {
+        "id": "stop-1",
+        "title": "应用入口：CommanderActivity",
+        "nodeId": "file:app/src/main/java/org/zhian/commander/CommanderActivity.kt",
+        "summary": "应用从这里启动。Activity 设置了 edge-to-edge 沉浸式显示，初始化主题系统（支持明暗模式切换）和国际化环境（根据系统语言提供中英文界面）。",
+        "keyTakeaways": [
+          "使用 `enableEdgeToEdge()` 实现全屏沉浸式体验，状态栏和导航栏透明",
+          "通过 `CompositionLocalProvider` 提供全局的多语言字符串资源",
+          "主题模式支持三种状态：Light、Dark 和 System（跟随系统）",
+          "状态提升模式：locale 和 theme 的状态在 Activity 层管理，通过回调传递给子组件"
+        ],
+        "codeHighlights": [
+          {
+            "description": "Edge-to-edge 透明系统栏设置",
+            "snippet": "enableEdgeToEdge(\n    statusBarStyle = SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT),\n    navigationBarStyle = SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT),\n)"
+          },
+          {
+            "description": "国际化 CompositionLocal 提供",
+            "snippet": "CompositionLocalProvider(LocalStrings provides stringsFor(selectedLocale)) {\n    CommanderTheme(darkTheme = isDark) {\n        // ...\n    }\n}"
+          }
+        ],
+        "nextSteps": [
+          "stop-2",
+          "stop-5",
+          "stop-6"
+        ],
+        "tags": [
+          "入口",
+          "Activity",
+          "主题",
+          "国际化",
+          "状态管理"
+        ]
+      },
+      {
+        "id": "stop-2",
+        "title": "导航中枢：CommanderHost",
+        "nodeId": "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt",
+        "summary": "应用的导航核心，定义了三个主要路由（Splash → Terminal → Settings）和精心设计的页面转场动画。使用 Jetpack Navigation Compose 实现声明式导航。",
+        "keyTakeaways": [
+          "三个核心路由：闪屏页（Splash）、终端主界面（Terminal）、设置页（Settings）",
+          "自定义转场动画：使用 Material Design 的 FastOutExtraSlowIn 缓动曲线",
+          "不同的转场方向：普通前进用 openEnter/openExit，返回用 closeEnter/closeExit",
+          "设置页使用完全从右侧滑入的特殊转场效果"
+        ],
+        "codeHighlights": [
+          {
+            "description": "页面打开动画：10% 水平滑入 + 淡入",
+            "snippet": "slideInHorizontally(\n    animationSpec = tween(durationMillis = 450, easing = TerminalGlobalMotionSpec.FastOutExtraSlowIn),\n    initialOffsetX = { fullWidth -> (fullWidth * 0.10f).roundToInt() },\n) + fadeIn(...)"
+          },
+          {
+            "description": "闪屏页导航逻辑：替换而非堆叠",
+            "snippet": "navController.navigate(CommanderRouting.Terminal) {\n    popUpTo(CommanderRouting.Splash) { inclusive = true }\n}"
+          }
+        ],
+        "nextSteps": [
+          "stop-3",
+          "stop-4",
+          "stop-7"
+        ],
+        "tags": [
+          "导航",
+          "路由",
+          "动画",
+          "转场",
+          "Navigation Compose"
+        ],
+        "languageNotes": "转场动画的缓动曲线参数来自 Material Design 规范，FastOutExtraSlowIn 创造更自然的物理感受。"
+      },
+      {
+        "id": "stop-3",
+        "title": "启动体验：SplashScreen",
+        "nodeId": "file:app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt",
+        "summary": "应用启动时的第一印象。通过 Canvas 绘制自定义的 '<>' 符号作为终端应用的图标，带有淡出动画效果。",
+        "keyTakeaways": [
+          "使用 Canvas API 绘制矢量图形，保证在不同屏幕密度下的清晰度",
+          "自定义图标：两个尖括号 '<>' 象征着终端命令符号",
+          "LaunchedEffect 协程控制时序：等待 1 秒后淡出并跳转",
+          "动画与导航同步：淡出完成后才触发页面跳转"
+        ],
+        "codeHighlights": [
+          {
+            "description": "Canvas 绘制终端符号",
+            "snippet": "val path = Path().apply {\n    // Left angle bracket \"<\"\n    moveTo(width * 0.35f, height * 0.25f)\n    lineTo(width * 0.15f, height * 0.5f)\n    lineTo(width * 0.35f, height * 0.75f)\n    // Right angle bracket \">\"\n    moveTo(width * 0.65f, height * 0.25f)\n    lineTo(width * 0.85f, height * 0.5f)\n    lineTo(width * 0.65f, height * 0.75f)\n}"
+          }
+        ],
+        "nextSteps": [
+          "stop-4"
+        ],
+        "tags": [
+          "闪屏",
+          "Canvas",
+          "动画",
+          "矢量绘图"
+        ],
+        "languageNotes": "使用相对坐标（百分比）而非绝对像素，使图标在不同屏幕尺寸上保持正确比例。"
+      },
+      {
+        "id": "stop-4",
+        "title": "核心界面：TerminalScreen",
+        "nodeId": "file:app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt",
+        "summary": "应用的核心功能界面。设计了多标签会话管理、智能滚动隐藏工具栏、三种模式切换的浮动工具栏（Normal/Modifier/Navigation）。目前是 UI 框架，实际的 shell 执行功能尚未实现。",
+        "keyTakeaways": [
+          "多标签会话：支持创建多个终端会话，每个标签显示会话状态（活跃/已完成/错误）",
+          "智能 UI：滚动时自动隐藏浮动工具栏，节省屏幕空间",
+          "三种工具栏模式：Normal（命令输入）、Modifier（Ctrl/Alt/Shift/Esc）、Navigation（方向键）",
+          "IM 风格设计：浮动工具栏 + FAB 执行按钮，模拟聊天应用的输入体验"
+        ],
+        "codeHighlights": [
+          {
+            "description": "标签状态管理数据类",
+            "snippet": "data class TabState(\n    val id: Int,\n    val title: String,\n    val isActive: Boolean,\n    val exitCode: Int? = null\n)"
+          },
+          {
+            "description": "滚动检测逻辑：派生状态",
+            "snippet": "val toolbarVisible by remember {\n    derivedStateOf {\n        !isScrollingDown || scrollState.firstVisibleItemIndex == 0\n    }\n}"
+          },
+          {
+            "description": "工具栏模式切换",
+            "snippet": "when (toolbarMode) {\n    ToolbarMode.Normal -> { /* 命令输入框 */ }\n    ToolbarMode.Modifier -> { /* Ctrl/Alt/Shift 按钮 */ }\n    ToolbarMode.Navigation -> { /* 方向键 */ }\n}"
+          }
+        ],
+        "nextSteps": [
+          "stop-7"
+        ],
+        "tags": [
+          "终端",
+          "多标签",
+          "工具栏",
+          "滚动",
+          "状态管理",
+          "核心功能"
+        ],
+        "languageNotes": "目前界面只显示占位的 'Hello World!' 文本，实际的 shell 命令执行、输出渲染、会话管理等核心功能还在开发中。",
+        "languageLesson": {
+          "concept": "derivedStateOf",
+          "explanation": "Compose 的性能优化技巧。当一个状态是从其他状态计算得出时，使用 `derivedStateOf` 可以避免不必要的重组。只有当计算结果真正改变时才会触发重组，而不是每次依赖状态变化都重组。"
+        }
+      },
+      {
+        "id": "stop-5",
+        "title": "视觉系统：Theme.kt",
+        "nodeId": "file:app/src/main/java/org/zhian/commander/ui/theme/Theme.kt",
+        "summary": "应用的主题定义层。目前使用 Material 3 的默认配色方案，支持明暗模式切换。未来可以在这里自定义品牌色、形状、排版等。",
+        "keyTakeaways": [
+          "Material 3 设计系统：使用最新的 Material Design 规范",
+          "明暗模式：通过 `darkColorScheme()` 和 `lightColorScheme()` 定义",
+          "ThemeMode 枚举：Light、Dark、System 三种模式",
+          "简洁实现：目前使用默认配色，为未来的自定义预留了扩展空间"
+        ],
+        "codeHighlights": [
+          {
+            "description": "主题 Composable 函数",
+            "snippet": "@Composable\nfun CommanderTheme(\n    darkTheme: Boolean = isSystemInDarkTheme(),\n    content: @Composable () -> Unit\n) {\n    val colorScheme = if (darkTheme) DarkColorScheme else LightColorScheme\n    MaterialTheme(colorScheme = colorScheme, content = content)\n}"
+          }
+        ],
+        "nextSteps": [],
+        "tags": [
+          "主题",
+          "Material 3",
+          "配色",
+          "明暗模式"
+        ],
+        "languageNotes": "当前使用默认配色方案，未来可以通过修改 `darkColorScheme()` 和 `lightColorScheme()` 的参数来定制品牌色彩。"
+      },
+      {
+        "id": "stop-6",
+        "title": "国际化系统：LocalStrings.kt",
+        "nodeId": "file:app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt",
+        "summary": "多语言字符串资源管理。支持英语、日语、简体中文、繁体中文四种语言，通过 CompositionLocal 在整个 Compose 树中提供字符串资源。",
+        "keyTakeaways": [
+          "四种语言支持：English、Japanese、SimplifiedChinese、TraditionalChinese",
+          "智能语言选择：根据 Locale 的 language、script、country 字段判断",
+          "繁体中文区域识别：TW（台湾）、HK（香港）、MO（澳门）",
+          "CompositionLocal 模式：通过 `LocalStrings.current` 在任意 Composable 中访问"
+        ],
+        "codeHighlights": [
+          {
+            "description": "字符串资源数据类",
+            "snippet": "data class Strings(\n    val appName: String = \"Commander\",\n    val settings: String = \"Settings\",\n    val newSession: String = \"New Session\",\n    val restartSession: String = \"Restart Session\",\n)"
+          },
+          {
+            "description": "语言选择逻辑",
+            "snippet": "fun stringsFor(locale: Locale): Strings = when (locale.language) {\n    \"zh\" -> when {\n        locale.script.equals(\"Hant\", ignoreCase = true) -> TraditionalChinese\n        locale.script.equals(\"Hans\", ignoreCase = true) -> SimplifiedChinese\n        locale.country.uppercase(Locale.ROOT) in TraditionalChineseRegions -> TraditionalChinese\n        else -> SimplifiedChinese\n    }\n    \"ja\" -> Japanese\n    else -> English\n}"
+          }
+        ],
+        "nextSteps": [],
+        "tags": [
+          "国际化",
+          "多语言",
+          "CompositionLocal",
+          "i18n"
+        ],
+        "languageLesson": {
+          "concept": "CompositionLocal",
+          "explanation": "Compose 的依赖注入机制。类似于 React 的 Context API，允许在组件树中隐式传递数据，避免逐层传递 props。使用 `staticCompositionLocalOf` 创建不会频繁变化的全局状态。"
+        }
+      },
+      {
+        "id": "stop-7",
+        "title": "设置界面：SettingsScreen",
+        "nodeId": "file:app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt",
+        "summary": "应用设置页面。目前只有基础框架（顶部栏 + 返回按钮），具体的设置项还未实现。未来会在这里添加语言切换、主题选择、终端配置等功能。",
+        "keyTakeaways": [
+          "Scaffold 布局：Material 3 的标准页面结构",
+          "TopAppBar：显示标题和返回按钮",
+          "导航集成：通过 `onNavigateBack` 回调返回上一页",
+          "待实现：语言选择、主题切换、字体大小、快捷键配置等设置项"
+        ],
+        "codeHighlights": [
+          {
+            "description": "Scaffold 结构",
+            "snippet": "Scaffold(\n    topBar = {\n        TopAppBar(\n            title = { Text(strings.settings) },\n            navigationIcon = {\n                IconButton(onClick = onNavigateBack) {\n                    Icon(imageVector = Icons.AutoMirrored.Filled.ArrowBack, ...)\n                }\n            }\n        )\n    }\n) { paddingValues ->\n    // 设置内容区域\n}"
+          }
+        ],
+        "nextSteps": [],
+        "tags": [
+          "设置",
+          "Scaffold",
+          "TopAppBar",
+          "待实现"
+        ],
+        "languageNotes": "这是一个占位页面，实际的设置功能还在规划中。"
+      },
+      {
+        "id": "stop-8",
+        "title": "构建配置：app/build.gradle.kts",
+        "nodeId": "file:app/build.gradle.kts",
+        "summary": "Android 应用模块的 Gradle 构建配置。定义了编译选项、依赖库版本、构建类型等。使用最新的 Compose BOM 和 Navigation Compose。",
+        "keyTakeaways": [
+          "目标 SDK：Android 14+ (compileSdk 37, minSdk 28)",
+          "Kotlin 版本：JVM 21 目标",
+          "Compose BOM：统一管理 Compose 库版本（2026.06.01）",
+          "核心依赖：Material 3、Navigation Compose、Lifecycle、Activity Compose"
+        ],
+        "codeHighlights": [
+          {
+            "description": "Compose BOM 版本管理",
+            "snippet": "val composeBom = platform(\"androidx.compose:compose-bom:2026.06.01\")\nimplementation(composeBom)\nandroidTestImplementation(composeBom)"
+          },
+          {
+            "description": "应用版本信息",
+            "snippet": "versionCode = 1784644720\nversionName = \"2.0.0-alpha\""
+          }
+        ],
+        "nextSteps": [],
+        "tags": [
+          "Gradle",
+          "构建",
+          "依赖",
+          "配置"
+        ],
+        "languageNotes": "使用 Compose BOM (Bill of Materials) 可以确保所有 Compose 库版本兼容，避免版本冲突。"
+      },
+      {
+        "id": "stop-9",
+        "title": "应用初始化：CommanderApplication",
+        "nodeId": "file:app/src/main/java/org/zhian/commander/CommanderApplication.kt",
+        "summary": "应用的 Application 类，在应用启动时最早执行。目前只有空的初始化占位，未来可以在这里进行全局初始化工作（如日志系统、崩溃报告、依赖注入容器等）。",
+        "keyTakeaways": [
+          "Application 生命周期：在所有 Activity 之前初始化",
+          "全局单例：整个应用只有一个 Application 实例",
+          "待添加：日志系统、性能监控、依赖注入框架等全局初始化"
+        ],
+        "codeHighlights": [
+          {
+            "description": "空的 Application 类",
+            "snippet": "class CommanderApplication : Application() {\n    override fun onCreate() {\n        super.onCreate()\n        // Application initialization\n    }\n}"
+          }
+        ],
+        "nextSteps": [],
+        "tags": [
+          "Application",
+          "初始化",
+          "生命周期"
+        ],
+        "languageNotes": "这是一个预留的扩展点，目前没有实际初始化代码。"
+      }
+    ],
+    "layers": [
+      {
+        "id": "layer:application",
+        "name": "应用入口层",
+        "description": "管理应用生命周期、全局配置和根组件。包括 Application 类和主 Activity。",
+        "nodes": [
+          "file:app/src/main/java/org/zhian/commander/CommanderApplication.kt",
+          "file:app/src/main/java/org/zhian/commander/CommanderActivity.kt"
+        ],
+        "color": "#FF6B6B"
+      },
+      {
+        "id": "layer:navigation",
+        "name": "导航路由层",
+        "description": "定义应用的页面路由、转场动画和导航逻辑。使用 Jetpack Navigation Compose 实现。",
+        "nodes": [
+          "file:app/src/main/java/org/zhian/commander/navigation/CommanderHost.kt"
+        ],
+        "color": "#4ECDC4"
+      },
+      {
+        "id": "layer:ui-screens",
+        "name": "界面页面层",
+        "description": "各个功能页面的 UI 实现。每个页面是独立的 Composable 组件。",
+        "nodes": [
+          "file:app/src/main/java/org/zhian/commander/ui/splash/SplashScreen.kt",
+          "file:app/src/main/java/org/zhian/commander/ui/terminal/TerminalScreen.kt",
+          "file:app/src/main/java/org/zhian/commander/ui/settings/SettingsScreen.kt"
+        ],
+        "color": "#95E1D3"
+      },
+      {
+        "id": "layer:ui-theme",
+        "name": "主题样式层",
+        "description": "Material Design 3 主题定义，包括配色方案和明暗模式支持。",
+        "nodes": [
+          "file:app/src/main/java/org/zhian/commander/ui/theme/Theme.kt"
+        ],
+        "color": "#F38181"
+      },
+      {
+        "id": "layer:ui-locale",
+        "name": "国际化层",
+        "description": "多语言字符串资源和语言选择逻辑。",
+        "nodes": [
+          "file:app/src/main/java/org/zhian/commander/ui/locale/LocalStrings.kt"
+        ],
+        "color": "#AA96DA"
+      },
+      {
+        "id": "layer:build-config",
+        "name": "构建配置层",
+        "description": "Gradle 构建脚本，定义依赖项、编译选项和构建变体。",
+        "nodes": [
+          "file:app/build.gradle.kts",
+          "file:build.gradle.kts",
+          "file:settings.gradle.kts"
+        ],
+        "color": "#FCBAD3"
+      }
+    ],
+    "concepts": [
+      {
+        "id": "concept-compose",
+        "name": "Jetpack Compose",
+        "description": "Android 的现代声明式 UI 框架。使用 Kotlin 编写 UI，通过函数式编程范式构建界面组件。",
+        "relatedStops": [
+          "stop-1",
+          "stop-2",
+          "stop-3",
+          "stop-4",
+          "stop-5",
+          "stop-6",
+          "stop-7"
+        ],
+        "tags": [
+          "Compose",
+          "声明式 UI",
+          "Kotlin"
+        ]
+      },
+      {
+        "id": "concept-material3",
+        "name": "Material Design 3",
+        "description": "Google 的最新设计系统，提供现代化的 UI 组件、动画和主题系统。支持动态配色和个性化设计。",
+        "relatedStops": [
+          "stop-5",
+          "stop-7"
+        ],
+        "tags": [
+          "Material 3",
+          "设计系统",
+          "主题"
+        ]
+      },
+      {
+        "id": "concept-navigation",
+        "name": "Navigation Compose",
+        "description": "Jetpack Navigation 的 Compose 版本。提供类型安全的路由、转场动画和深度链接支持。",
+        "relatedStops": [
+          "stop-2"
+        ],
+        "tags": [
+          "导航",
+          "路由",
+          "Navigation"
+        ]
+      },
+      {
+        "id": "concept-state-management",
+        "name": "Compose 状态管理",
+        "description": "使用 remember、mutableStateOf、derivedStateOf 等 API 管理 UI 状态。遵循单向数据流和状态提升原则。",
+        "relatedStops": [
+          "stop-1",
+          "stop-4"
+        ],
+        "tags": [
+          "状态管理",
+          "单向数据流",
+          "remember"
+        ]
+      },
+      {
+        "id": "concept-composition-local",
+        "name": "CompositionLocal",
+        "description": "Compose 的隐式依赖传递机制。用于在组件树中共享全局状态（如主题、语言）而不需要显式传递参数。",
+        "relatedStops": [
+          "stop-1",
+          "stop-6"
+        ],
+        "tags": [
+          "CompositionLocal",
+          "依赖注入",
+          "全局状态"
+        ]
+      }
+    ],
+    "journeys": [
+      {
+        "id": "journey-quickstart",
+        "title": "快速上手：理解应用启动流程",
+        "description": "跟随应用的启动过程，从 Application 初始化到闪屏页，再到主界面。",
+        "stops": [
+          "stop-9",
+          "stop-1",
+          "stop-2",
+          "stop-3",
+          "stop-4"
+        ],
+        "estimatedMinutes": 15
+      },
+      {
+        "id": "journey-ui-architecture",
+        "title": "UI 架构：Compose + Navigation",
+        "description": "了解应用的 UI 架构设计：导航系统、页面组织、主题和国际化。",
+        "stops": [
+          "stop-2",
+          "stop-5",
+          "stop-6",
+          "stop-4",
+          "stop-7"
+        ],
+        "estimatedMinutes": 20
+      },
+      {
+        "id": "journey-terminal-deep-dive",
+        "title": "深入终端界面",
+        "description": "详细探索应用的核心功能界面：多标签管理、工具栏设计、滚动优化。",
+        "stops": [
+          "stop-4"
+        ],
+        "estimatedMinutes": 10
+      },
+      {
+        "id": "journey-build-system",
+        "title": "构建系统与依赖",
+        "description": "了解项目的构建配置、依赖管理和 Gradle 设置。",
+        "stops": [
+          "stop-8"
+        ],
+        "estimatedMinutes": 5
+      }
+    ],
+    "metadata": {
+      "version": "1.0.0",
+      "createdAt": "2026-07-22",
+      "projectPhase": "early-development",
+      "completionEstimate": "15%",
+      "keyTechnologies": [
+        "Kotlin",
+        "Jetpack Compose",
+        "Material Design 3",
+        "Navigation Compose",
+        "Android SDK 37"
+      ],
+      "architectureStyle": "Single Activity + Compose Navigation",
+      "notablePatterns": [
+        "声明式 UI",
+        "单向数据流",
+        "状态提升",
+        "CompositionLocal 依赖注入"
+      ]
+    }
+  }
+}
